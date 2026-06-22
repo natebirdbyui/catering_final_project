@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-    base: "/your-repository-name/",
+    base: "/catering_final_project/",
     server: {
     open: true
     },
