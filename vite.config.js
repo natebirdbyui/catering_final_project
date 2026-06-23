@@ -9,11 +9,11 @@ export default defineConfig({
     build: {
     rollupOptions: {
         input: {
-            home: resolve(__dirname, "index.html"),
-            about_us: resolve(__dirname, "src/about_us/about_us.html"),
+            home: resolve(__dirname, "index.html"),            
             menu: resolve(__dirname, "src/menu/menu.html"),
             booking: resolve(__dirname, "src/booking/booking.html"),
             contact_us: resolve(__dirname, "src/contact_us/contact_us.html"),
+            about_us: resolve(__dirname, "src/about_us/about_us.html"),
             cart: resolve(__dirname, "src/cart/cart.html")
             }
         }
