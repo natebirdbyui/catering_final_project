@@ -11,14 +11,14 @@ export function loadNav() {
         </div>
         <nav class="main-nav">
             <a href="${BASE}">Home</a>
-            <a href="${BASE}menu/menu.html">Menu</a>
-            <a href="${BASE}about_us/about_us.html">About</a>
-            <a href="${BASE}booking/booking.html">Booking</a>
-            <a href="${BASE}contact_us/contact_us.html">Contact</a>
+            <a href="${BASE}src/menu/menu.html">Menu</a>
+            <a href="${BASE}src/about_us/about_us.html">About</a>
+            <a href="${BASE}src/booking/booking.html">Booking</a>
+            <a href="${BASE}src/contact_us/contact_us.html">Contact</a>
         </nav>
 
         <nav class="cart-nav">
-            <a href="${BASE}cart/cart.html">🛒</a>
+            <a href="${BASE}src/cart/cart.html">🛒</a>
         </nav>
     `;
 }
