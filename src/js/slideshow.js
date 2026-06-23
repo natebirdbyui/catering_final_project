@@ -1,39 +1,47 @@
-//slideshow.js
+// slideshow.js
+const BASE = import.meta.env.BASE_URL;
 
+let index = 0;
+let intervalId;
 
 export function loadSlideshow() {
     const slideshowEl = document.querySelector(".hero-banner");
-
     if (!slideshowEl) return;
 
     slideshowEl.innerHTML = `
         <div class="slideshow">
             <div class="slide active">
-                <img src="/images/logo_and_banner/steak-1359897_1920.webp" alt="slide1">
+                <img src="${BASE}images/logo_and_banner/steak-1359897_1920.webp" alt="slide1">
             </div>
+
             <div class="slide">
-                <img src="/images/food/rsz_bacon_wrap_pork.jpg" alt="slide2">
+                <img src="${BASE}images/food/rsz_bacon_wrap_pork.jpg" alt="slide2">
             </div>
+
             <div class="slide">
-                <img src="/images/food/rsz_complete_bbq.jpg" alt="slide3">
+                <img src="${BASE}images/food/rsz_complete_bbq.jpg" alt="slide3">
             </div>
+
             <div class="slide">
-                <img src="/images/food/rsz_bbq_hamburger_hotdog.jpg" alt="slide4">
+                <img src="${BASE}images/food/rsz_bbq_hamburger_hotdog.jpg" alt="slide4">
             </div>
+
             <div class="slide">
-                <img src="/images/chef/meet_the_chef_nate.jpg" alt="slide5">
+                <img src="${BASE}images/chef/meet_the_chef_nate.jpg" alt="slide5">
             </div>
         </div>
-    `;            
-}
+    `;
 
-let index = 0;
+    startSlideshow(); // ✅ correct place
+}
 
 export function startSlideshow() {
     const slides = document.querySelectorAll(".slide");
     if (!slides.length) return;
 
-    setInterval(() => {
+    if (intervalId) clearInterval(intervalId);
+
+    intervalId = setInterval(() => {
         slides.forEach(s => s.classList.remove("active"));
 
         index++;
