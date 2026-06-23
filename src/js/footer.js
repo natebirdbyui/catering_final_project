@@ -7,7 +7,7 @@ export function loadFooter() {
     if (!footerEl) return;
 
     footerEl.innerHTML = `
-        <p> &copy; 2026 Catering Company. All rights reserved.</p>
+        <p> &copy; 2026 Hope It Pans Out Catering. All rights reserved.</p>
         
     `;
 }

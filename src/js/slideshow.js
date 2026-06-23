@@ -1,26 +1,27 @@
 //slideshow.js
-const BASE = import.meta.env.BASE_URL;
+
 
 export function loadSlideshow() {
     const slideshowEl = document.querySelector(".hero-banner");
+
     if (!slideshowEl) return;
 
     slideshowEl.innerHTML = `
         <div class="slideshow">
             <div class="slide active">
-                <img src="${BASE}images/logo_and_banner/steak-1359897_1920.webp" alt="slide1">
+                <img src="/images/logo_and_banner/steak-1359897_1920.webp" alt="slide1">
             </div>
             <div class="slide">
-                <img src="${BASE}images/food/rsz_bacon_wrap_pork.jpg" alt="slide2">
+                <img src="/images/food/rsz_bacon_wrap_pork.jpg" alt="slide2">
             </div>
             <div class="slide">
-                <img src="${BASE}images/food/rsz_complete_bbq.jpg" alt="slide3">
+                <img src="/images/food/rsz_complete_bbq.jpg" alt="slide3">
             </div>
             <div class="slide">
-                <img src="${BASE}images/food/rsz_bbq_hamburger_hotdog.jpg" alt="slide4">
+                <img src="/images/food/rsz_bbq_hamburger_hotdog.jpg" alt="slide4">
             </div>
             <div class="slide">
-                <img src="${BASE}images/chef/meet_the_chef_nate.jpg" alt="slide5">
+                <img src="/images/chef/meet_the_chef_nate.jpg" alt="slide5">
             </div>
         </div>
     `;            

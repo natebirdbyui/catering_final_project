@@ -1,24 +1,21 @@
 // utils.mjs
-const BASE = import.meta.env.BASE_URL;
 
-// this will load the header navigation links, and the logo
-export function loadNav() {
-    const BASE = import.meta.env.BASE_URL;
 
+export function loadNav() {   
     return `
         <div class="logo">
-            <img src="${BASE}images/logo_and_banner/rsz_1logo.webp" alt="Logo">
+            <img src="/images/logo_and_banner/rsz_1logo.webp" alt="Logo">
         </div>
         <nav class="main-nav">
-            <a href="${BASE}">Home</a>
-            <a href="${BASE}src/menu/menu.html">Menu</a>
-            <a href="${BASE}src/about_us/about_us.html">About</a>
-            <a href="${BASE}src/booking/booking.html">Booking</a>
-            <a href="${BASE}src/contact_us/contact_us.html">Contact</a>
+            <a href="/">Home</a>
+            <a href="/menu/menu.html">Menu</a>
+            <a href="/about_us/about_us.html">About</a>
+            <a href="/booking/booking.html">Booking</a>
+            <a href="/contact_us/contact_us.html">Contact</a>
         </nav>
 
         <nav class="cart-nav">
-            <a href="${BASE}src/cart/cart.html">🛒</a>
+            <a href="/cart/cart.html">🛒</a>
         </nav>
     `;
 }
