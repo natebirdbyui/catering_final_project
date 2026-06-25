@@ -1,3 +1,4 @@
+// footer.js
 console.log("footer.js loaded");
 
 export function loadFooter() {
