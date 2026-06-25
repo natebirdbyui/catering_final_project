@@ -5,6 +5,8 @@ let index = 0;
 let intervalId;
 
 export function loadSlideshow() {
+    index = 0; // reset index when loading slideshow
+    console.log(document.querySelector(".hero-banner"));
     const slideshowEl = document.querySelector(".hero-banner");
     if (!slideshowEl) return;
 
