@@ -5,13 +5,13 @@
         <nav class="main-nav">
             <a href="${e}">Home</a>
             <a href="${e}menu/menu.html">Menu</a>
-            <a href="${e}about_us/about_us.html">About</a>
+            <a href="${e}about_us/about_us.html">About Us</a>
             <a href="${e}booking/booking.html">Booking</a>
-            <a href="${e}contact_us/contact_us.html">Contact</a>
+            <a href="${e}contact_us/contact_us.html">Contact Us</a>
         </nav>
 
         <nav class="cart-nav">
-            <a href="${e}cart/cart.html">🛒</a>
+            <a href="${e}cart/cart.html">🛒 Cart</a>
         </nav>
     `}console.log("header.js loaded");function u(){const e=document.querySelector(".header-create");e&&(e.innerHTML=d())}console.log("footer.js loaded");function f(){const e=document.querySelector(".footer-create");e&&(e.innerHTML=`
         <p>&copy; 2026 Hope It Pans Out Catering. All rights reserved.</p>
