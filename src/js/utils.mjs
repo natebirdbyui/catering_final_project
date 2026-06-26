@@ -7,10 +7,11 @@ export function loadNav() {
         </div>
         <nav class="main-nav">
             <a href="${BASE}">Home</a>
-            <a href="${BASE}menu/menu.html">Menu</a>
-            <a href="${BASE}about_us/about_us.html">About Us</a>
+            <a href="${BASE}menu/menu.html">Menu</a>            
             <a href="${BASE}booking/booking.html">Booking</a>
             <a href="${BASE}contact_us/contact_us.html">Contact Us</a>
+            <a href="${BASE}about_us/about_us.html">About Us</a>
+            
         </nav>
 
         <nav class="cart-nav">
