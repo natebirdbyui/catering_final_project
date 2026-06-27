@@ -4,10 +4,11 @@
         </div>
         <nav class="main-nav">
             <a href="${e}">Home</a>
-            <a href="${e}menu/menu.html">Menu</a>
-            <a href="${e}about_us/about_us.html">About Us</a>
+            <a href="${e}menu/menu.html">Menu</a>            
             <a href="${e}booking/booking.html">Booking</a>
             <a href="${e}contact_us/contact_us.html">Contact Us</a>
+            <a href="${e}about_us/about_us.html">About Us</a>
+            
         </nav>
 
         <nav class="cart-nav">
