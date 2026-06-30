@@ -2,9 +2,8 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
-    // IMPORTANT:
-    // Use "./" for safest GitHub Pages + local compatibility
-    base: "./",
+
+    base: "/catering_final_project/",
 
     // Your source folder
     root: "src/",
