@@ -1,0 +1,12 @@
+.event-calendar {
+    padding: 20px;
+    text-align: center;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+}
