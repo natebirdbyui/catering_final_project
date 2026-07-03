@@ -4,49 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HIPOC | Menu</title>
-    <meta name="description" content="HIPO Catering is a premier catering service that offers
-    a wide range of delicious and customizable menu options for all occasions. 
-    Whether you're planning a corporate event, wedding, or private party, 
-    HIPOC has you covered with exceptional service and delectable cuisine.">
-    <meta name="keywords" content="HIPOC, catering service, event catering, 
-    wedding catering, corporate catering, private party catering, customizable menu, delicious cuisine">
-    <meta name="author" content="HIPOC">
-  <script type="module" crossorigin src="/catering_final_project/assets/main-ZGEJ0xMF.js"></script>
-  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-fr2Y2mMT.css">
+
+    <meta name="description" content="HIPO Catering is a premier catering service that offers a wide range of delicious and customizable menu options for all occasions.">
+    <meta name="keywords" content="HIPOC, catering service, event catering, wedding catering, corporate catering">
+    <meta name="author" content="HIPOC">
+
+  <script type="module" crossorigin src="/catering_final_project/assets/main-USXSQf4v.js"></script>
+  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-DcIv3wHl.css">
 </head>
+
 <body>
+
+    <!-- HEADER -->
     <header class="header-create">
-        <!--header.js will insert header content here-->
+        <!-- header.js injects content -->
     </header>
 
     <main class="menu-page">
-        <section class="menu-items">
-            <h1>Our Menu</h1>
-            <p>Explore our wide range of delicious and customizable menu options for all occasions.
-            Whether you're planning a corporate event, wedding, or private party, 
-            HIPOC has you covered with exceptional service and delectable cuisine.</p>
-            <p>Click items to add them to your order.</p>
 
-            
-        </section>
-        
-        <!-- DESKTOP CART SIDEBAR -->
-        <aside class="cart-sidebar">
-            <h2>Your Order</h2>
+        <!-- MAIN LAYOUT -->
+        <div class="menu-layout">
 
-            <div id="cart-sidebar-items"></div>
+            <!-- LEFT: CART SIDEBAR -->
+            <aside class="cart-sidebar">
 
-            <div class="cart-summary">
-                <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
-            </div>
-        </aside>
+                <div class="cart-header">
+                    <h2>Your Order</h2>
+                </div>
 
-        <!-- MOBILE CART DRAWER -->
+                <!-- SCROLLABLE ITEM AREA -->
+                <div class="cart-items" id="cart-sidebar-items"></div>
+
+                <!-- SUMMARY (always visible above button) -->
+                <div class="cart-summary">
+
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span>$<span id="cart-subtotal">0.00</span></span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span>$<span id="cart-tax">0.00</span></span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span>$<span id="cart-total">0.00</span></span>
+                    </div>
+
+                </div>
+
+                <!-- STICKY ACTION BUTTON -->
+                <div class="cart-actions">
+                    <button id="checkout-btn">Proceed to Checkout</button>
+                </div>
+
+            </aside>
+
+            <!-- RIGHT: MENU CONTENT -->
+            <section class="menu-items">
+
+                <h1>Our Menu</h1>
+
+                <p>
+                    Explore our wide range of delicious and customizable menu options for all occasions.
+                    Whether you're planning a corporate event, wedding, or private party,
+                    HIPOC has you covered with exceptional service and delectable cuisine.
+                </p>
+
+                <p>Click items to add them to your order.</p>
+
+                <!-- MENU GRID (JS INJECTS ITEMS HERE) -->
+                <div id="menu-list"></div>
+
+            </section>
+
+        </div>
+
+        <!-- MOBILE CART BAR -->
         <div class="mobile-cart-bar">
             <button id="open-cart">View Order</button>
         </div>
 
+        <!-- MOBILE CART DRAWER -->
         <div class="mobile-cart-drawer">
+
             <div class="drawer-header">
                 <h3>Your Order</h3>
                 <button id="close-cart">X</button>
@@ -55,24 +98,14 @@
             <div id="mobile-cart-items"></div>
 
             <div class="drawer-footer">
-                <p>Total: $<span id="mobile-total">0</span></p>
+                <p>Total: $<span id="mobile-total">0.00</span></p>
             </div>
+
         </div>
-
-        <div class="menu-layout">
-
-        <section class="menu-items">
-            <div id="menu-list"></div>
-        </section>
-
-        <aside class="cart-sidebar">
-            <div id="cart-sidebar-items"></div>
-        </aside>
-
-</div>
 
         <!-- CHECKOUT BAR -->
         <div class="checkout-bar">
+
             <div class="checkout-summary">
                 <span>Items: <span id="item-count">0</span></span>
                 <span>Subtotal: $<span id="subtotal">0.00</span></span>
@@ -81,11 +114,14 @@
             </div>
 
             <button id="checkout-btn">Proceed to Checkout</button>
-        </div>
-</main>
 
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
     <footer class="footer-create">
-        <!--footer.js will insert footer content here-->
+        <!-- footer.js injects content -->
     </footer>
 
 </body>
