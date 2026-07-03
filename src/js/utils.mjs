@@ -22,6 +22,15 @@ export function loadNav() {
         <!-- Sidebar navigation -->
         <div class="sidebar-overlay"></div>
 
+        <!-- Desktop navigation -->
+        <div class="desktop-nav">
+            <a href="${BASE}">Home</a>
+                <a href="${BASE}menu/menu.html">Menu</a>            
+                <a href="${BASE}booking/booking.html">Booking</a>
+                <a href="${BASE}contact_us/contact_us.html">Contact Us</a>
+                <a href="${BASE}about_us/about_us.html">About Us</a>
+        </div>
+
         <aside class="sidebar-nav">
             <nav class="sidebar-links">
                 <a href="${BASE}">Home</a>

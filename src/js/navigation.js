@@ -8,12 +8,14 @@ export function initSidebarMenu() {
     const openMenu = () => {
         sidebar.classList.add("open");
         overlay.classList.add("open");
+        btn.classList.add("hidden"); //hides hamburger button when menu is open
         document.body.classList.add("menu-open");
     };
 
     const closeMenu = () => {
         sidebar.classList.remove("open");
         overlay.classList.remove("open");
+        btn.classList.remove("hidden"); //shows hamburger button when menu is closed
         document.body.classList.remove("menu-open");
     };
 

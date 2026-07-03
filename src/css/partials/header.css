@@ -1,3 +1,4 @@
+/*header.css*/
 header {
     background-color: #52381D;
 }
@@ -22,16 +23,50 @@ header {
     grid-row: 1 / 2;
     justify-self: end;
     text-decoration: none;  
-    transition: transform 0.3s ease;  
+    transition: transform 0.3s ease; 
 }
 
-.cart-nav:hover {
+.cart-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+.cart-nav:hover{
     text-decoration: none;
     transform: scale(1.5);    
 }
 
+
 /* Hamburger button
 Hide hamburger button in desktop view */
 .nav-toggle {
+    display: none; 
+}
+
+.desktop-nav {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: center;
+    display: flex;
+    gap: 20px;
+
+}
+
+.desktop-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+.desktop-nav a:hover {
+    text-decoration: none;
+    transform: scale(1.2);    
+}
+
+/* Hide sidebar navigation in desktop view */
+.sidebar-nav {
     display: none; 
 }

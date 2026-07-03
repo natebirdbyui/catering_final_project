@@ -1,0 +1,158 @@
+.menu-layout {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-container {
+    flex: 3;
+}
+.menu-card {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background: white;
+}
+
+.menu-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-info {
+    flex: 1;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #52381D;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-sidebar {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    background: #283618;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease;
+}
+
+.cart-item {
+    margin-bottom: 15px;
+}
+
+.checkout-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: #52381D;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px 20px;
+    z-index: 5000;
+
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.3);
+}
+
+.checkout-summary {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+}
+
+.qty-controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.qty-controls button {
+    cursor: pointer;
+}
+.mobile-cart-bar {
+    display: none;
+}
+
+.mobile-cart-drawer {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    background: #52381D;
+    color: white;
+    padding: 20px;
+    transition: bottom 0.3s ease;
+    z-index: 5000;
+}
+
+/* button */
+#checkout-btn {
+    background: #fff;
+    color: #52381D;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+/* animation when values change */
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.pop {
+    animation: pop 0.25s ease;
+}
+
+.mobile-cart-drawer.open {
+    bottom: 0;
+}
+
+/* glow effect on cart when item arrives */
+@keyframes cartPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.cart-pulse {
+    animation: cartPulse 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .mobile-cart-bar {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #283618;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .cart-sidebar {
+        display: none; /* hide desktop sidebar */
+    }
+}

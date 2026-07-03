@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIPO Catering | Menu</title>
+    <title>HIPOC | Menu</title>
     <meta name="description" content="HIPO Catering is a premier catering service that offers
     a wide range of delicious and customizable menu options for all occasions. 
     Whether you're planning a corporate event, wedding, or private party, 
-    HIPO Catering has you covered with exceptional service and delectable cuisine.">
-    <meta name="keywords" content="HIPO Catering, catering service, event catering, 
+    HIPOC has you covered with exceptional service and delectable cuisine.">
+    <meta name="keywords" content="HIPOC, catering service, event catering, 
     wedding catering, corporate catering, private party catering, customizable menu, delicious cuisine">
-    <meta name="author" content="HIPO Catering">
+    <meta name="author" content="HIPOC">
     <link rel="stylesheet" href="../css/base.css">
     <script type="module" src="../js/main.js" defer></script>
 </head>
@@ -19,12 +19,70 @@
         <!--header.js will insert header content here-->
     </header>
 
-    <main>
-        <h1>Our Menu</h1>
-        <p>Explore our wide range of delicious and customizable menu options for all occasions.
-        Whether you're planning a corporate event, wedding, or private party, 
-        HIPO Catering has you covered with exceptional service and delectable cuisine.</p>
-    </main>
+    <main class="menu-page">
+        <section class="menu-items">
+            <h1>Our Menu</h1>
+            <p>Explore our wide range of delicious and customizable menu options for all occasions.
+            Whether you're planning a corporate event, wedding, or private party, 
+            HIPOC has you covered with exceptional service and delectable cuisine.</p>
+            <p>Click items to add them to your order.</p>
+
+            
+        </section>
+        
+        <!-- DESKTOP CART SIDEBAR -->
+        <aside class="cart-sidebar">
+            <h2>Your Order</h2>
+
+            <div id="cart-sidebar-items"></div>
+
+            <div class="cart-summary">
+                <p>Subtotal: $<span id="cart-subtotal">0.00</span></p>
+            </div>
+        </aside>
+
+        <!-- MOBILE CART DRAWER -->
+        <div class="mobile-cart-bar">
+            <button id="open-cart">View Order</button>
+        </div>
+
+        <div class="mobile-cart-drawer">
+            <div class="drawer-header">
+                <h3>Your Order</h3>
+                <button id="close-cart">X</button>
+            </div>
+
+            <div id="mobile-cart-items"></div>
+
+            <div class="drawer-footer">
+                <p>Total: $<span id="mobile-total">0</span></p>
+            </div>
+        </div>
+
+        <div class="menu-layout">
+
+        <section class="menu-items">
+            <div id="menu-list"></div>
+        </section>
+
+        <aside class="cart-sidebar">
+            <div id="cart-sidebar-items"></div>
+        </aside>
+
+</div>
+
+        <!-- CHECKOUT BAR -->
+        <div class="checkout-bar">
+            <div class="checkout-summary">
+                <span>Items: <span id="item-count">0</span></span>
+                <span>Subtotal: $<span id="subtotal">0.00</span></span>
+                <span>Tax: $<span id="tax">0.00</span></span>
+                <span><strong>Total: $<span id="total">0.00</span></strong></span>
+            </div>
+
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+</main>
 
     <footer class="footer-create">
         <!--footer.js will insert footer content here-->
