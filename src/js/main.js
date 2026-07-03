@@ -14,11 +14,17 @@ import { loadMealOfTheDay } from "./mealOfTheDay.js";
 import { initCalendar } from "./calendar.js";
 import { loadHolidays } from "./holidays.js";
 
-
-
-
-
 console.log("main.js loaded:", location.pathname);
+
+async function initMenuPage() {
+    console.log("INIT menu page");
+
+    const menu = await loadMenu();
+
+    console.log("MENU DATA:", menu);
+
+    displayMenuItems(menu);
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -33,14 +39,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     loadHolidays();
     initCalendar();
 
-    // MENU (IMPORTANT: async flow)
-    console.log("INIT menu page")
-    const menuItems = await loadMenu();
-    console.log("MENU DATA:", menuItems);
-
-
-    displayMenuItems(menuItems);
-    
+   //Show menu items in menu page
+    initMenuPage();
 
     // CART + CHECKOUT
     initCartSidebar();

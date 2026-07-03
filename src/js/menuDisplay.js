@@ -1,40 +1,58 @@
 //menuDisplay.js
-import { addToCart, flyToCart } from "./cart.js";
+const BASE = import.meta.env.BASE_URL;
 
-export function displayMenuItems(menuItems) {
-    const menuContainer = document.getElementById("menu-list");
-    if (!menuContainer) return;
+export function displayMenuItems(menu) {
+    const container = document.getElementById("menu-list");
 
-    menuContainer.innerHTML = menuItems.map(item => `
-        <div class="menu-item" data-id="${item.id}">
-            <h2>${item.name}</h2>
-            <img src="${item.image}" alt="${item.name}">
-            <p>${item.description}</p>
-            <p>Servings: ${item.servings}</p>
-            <p>$${item.price_per_serving.toFixed(2)}</p>
+    if (!container) return;
 
-            <button class="add-to-cart" data-id="${item.id}">
-                Add to Cart
-            </button>
-        </div>
-    `).join("");
+    container.innerHTML = "";
 
-    bindMenuButtons(menuItems);
-}
+    menu.forEach(item => {
+        const card = document.createElement("div");
+        card.classList.add("menu-card-vertical");
 
-function bindMenuButtons(menuItems) {
-    const cartIcon = document.querySelector(".cart-nav a");
+        // IMAGE
+        const img = document.createElement("img");
+        img.src = `${BASE}${item.image}`;
+        img.alt = item.name;
 
-    document.querySelectorAll(".add-to-cart").forEach(btn => {
-        btn.addEventListener("click", () => {
-            const id = Number(btn.dataset.id);
-            const item = menuItems.find(i => i.id === id);
-            if (!item) return;
+        // TITLE
+        const title = document.createElement("h3");
+        title.textContent = item.name;
 
-            addToCart(item);
+        // DESCRIPTION
+        const desc = document.createElement("p");
+        desc.classList.add("menu-desc");
+        desc.textContent =
+            item.description || "Delicious handcrafted menu item made fresh.";
 
-            const card = btn.closest(".menu-item");
-            flyToCart(card, cartIcon);
-        });
+        // SERVINGS
+        const servings = document.createElement("p");
+        servings.classList.add("menu-servings");
+        servings.textContent =
+            `Serves approx. ${item.servings_per_tray || "varies"} guests per tray`;
+
+        // PRICE
+        const price = document.createElement("p");
+        price.classList.add("menu-price");
+        price.textContent =
+            `$${item.price_per_serving.toFixed(2)} per serving`;
+
+        // BUTTON
+        const btn = document.createElement("button");
+        btn.classList.add("add-to-cart");
+        btn.dataset.id = item.id;
+        btn.textContent = "Add to Cart";
+
+        // BUILD CARD (STACKED)
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(desc);
+        card.appendChild(servings);
+        card.appendChild(price);
+        card.appendChild(btn);
+
+        container.appendChild(card);
     });
 }

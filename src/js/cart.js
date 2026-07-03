@@ -3,6 +3,17 @@
 console.log("cart.js loaded");
 
 const CART_KEY = "hipoc_cart";
+const bar = document.querySelector(".checkout-bar");
+
+export function toggleCheckoutBar(count) {
+    if (!bar) return;
+
+    bar.classList.toggle("show", count > 0);
+    if (count > 0) {
+        bar.classList.add("bump");
+        setTimeout(() => bar.classList.remove("bump"), 250);
+    }
+}
 
 export function getCart() {
     return JSON.parse(localStorage.getItem(CART_KEY)) || [];
@@ -19,8 +30,8 @@ export function saveCart(cart) {
 
 export function addToCart(item) {
     const cart = getCart();
-
     const existing = cart.find(i => i.id === item.id);
+    toggleCheckoutBar(cart.length);
 
     if (existing) {
         existing.quantity += 1;
