@@ -1,3 +1,4 @@
+//cartAnimation.js
 export function flyToCart(startEl, cartEl) {
     if (!startEl || !cartEl) return;
 

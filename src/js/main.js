@@ -6,6 +6,7 @@ import { initSidebarMenu } from "./navigation.js";
 
 import { loadMenu } from "./menu.js";
 import { displayMenuItems } from "./menuDisplay.js";
+import { initMobileCart } from "./mobileCart.js";
 
 import { initCartSidebar } from "./cartUI.js";
 import { initCheckoutBar } from "./checkoutUI.js";
@@ -45,4 +46,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     // CART + CHECKOUT
     initCartSidebar();
     initCheckoutBar();
+    initMobileCart();
 });

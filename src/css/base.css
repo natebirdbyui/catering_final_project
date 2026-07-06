@@ -1,12 +1,12 @@
-/* styles.css */
+/* base.css */
 @import "./partials/header.css";
 @import "./partials/footer.css";
 @import "./partials/navigation.css";
 @import "./partials/hero-banner.css";
-@import "./partials/mobile.css";
 @import "./partials/mealOfDay.css";
 @import "./partials/calendar.css";
 @import "./partials/menu.css";
+@import "./partials/mobile.css";
 
 body {
     background-color: #e5e5e5;

@@ -1,4 +1,6 @@
 //menuDisplay.js
+import { addToCart } from "./cart.js";
+import { flyToCart } from "./cartAnimation.js";
 const BASE = import.meta.env.BASE_URL;
 
 export function displayMenuItems(menu) {
@@ -44,6 +46,17 @@ export function displayMenuItems(menu) {
         btn.classList.add("add-to-cart");
         btn.dataset.id = item.id;
         btn.textContent = "Add to Cart";
+
+        btn.addEventListener("click", () => {
+            addToCart(item);
+
+            const cartIcon = document.querySelector(".cart-nav a");
+            const card = btn.closest(".menu-card-vertical") || btn.closest(".menu-card");
+
+            if (cartIcon && card) {
+                flyToCart(card, cartIcon);
+            }
+        });
 
         // BUILD CARD (STACKED)
         card.appendChild(img);

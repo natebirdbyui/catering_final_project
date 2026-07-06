@@ -1,53 +1,122 @@
-//cartUI.js
+// cartUI.js
 
-import {getCart, increaseItem, decreaseItem} from "./cart.js";
+import { getCart, increaseItem, decreaseItem } from "./cart.js";
+
+console.log("cartUI.js loaded");
 
 
 export function initCartSidebar() {
-    renderCart();
 
-    // re-render every time cart changes (simple approach)
-    window.addEventListener("cart:update", renderCart);
+    window.addEventListener("cart:update", (e) => {
+        renderCart(e.detail?.totals);
+    });
+
+
+    renderCart({
+        subtotal: 0,
+        tax: 0,
+        total: 0
+    });
+
 }
 
-export function renderCart() {
+
+
+function renderCart(totals = {}) {
+
     const cart = getCart();
 
     const container = document.getElementById("cart-sidebar-items");
+
     const subtotalEl = document.getElementById("cart-subtotal");
+    const taxEl = document.getElementById("cart-tax");
+    const totalEl = document.getElementById("cart-total");
+
 
     if (!container) return;
 
-    container.innerHTML = cart.map(item => `
-        <div class="cart-item">
-            <h4>${item.name}</h4>
 
-            <p>$${(item.price_per_serving * item.quantity).toFixed(2)}</p>
+    if (cart.length === 0) {
+
+        container.innerHTML = `
+            <p>Your order is empty.</p>
+        `;
+
+        if (subtotalEl) subtotalEl.textContent = "0.00";
+        if (taxEl) taxEl.textContent = "0.00";
+        if (totalEl) totalEl.textContent = "0.00";
+
+        return;
+    }
+
+
+
+    container.innerHTML = cart.map(item => `
+
+        <div class="cart-item">
+
+            <span>${item.name}</span>
+
 
             <div class="qty-controls">
-                <button data-id="${item.id}" class="minus">−</button>
+
+                <button class="minus" data-id="${item.id}">
+                    −
+                </button>
+
                 <span>${item.quantity}</span>
-                <button data-id="${item.id}" class="plus">+</button>
+
+                <button class="plus" data-id="${item.id}">
+                    +
+                </button>
+
             </div>
+
+
+            <span>
+                $${(item.price_per_serving * item.quantity).toFixed(2)}
+            </span>
+
+
         </div>
-    `).join('');
 
-    const subtotal = cart.reduce(
-        (sum, i) => sum + i.price_per_serving * i.quantity,
-        0
-    );
+    `).join("");
 
-    subtotalEl.textContent = subtotal.toFixed(2);
 
-    bindCartButtons();
-}
 
-function bindCartButtons() {
-    document.querySelectorAll(".plus").forEach(btn => {
-        btn.onclick = () => increaseItem(Number(btn.dataset.id));
+    container.querySelectorAll(".plus").forEach(btn => {
+
+        btn.addEventListener("click", () => {
+            increaseItem(btn.dataset.id);
+        });
+
     });
 
-    document.querySelectorAll(".minus").forEach(btn => {
-        btn.onclick = () => decreaseItem(Number(btn.dataset.id));
+
+
+    container.querySelectorAll(".minus").forEach(btn => {
+
+        btn.addEventListener("click", () => {
+            decreaseItem(btn.dataset.id);
+        });
+
     });
+
+
+
+    const subtotal = totals.subtotal ?? 0;
+    const tax = totals.tax ?? 0;
+    const total = totals.total ?? 0;
+
+
+
+    if (subtotalEl)
+        subtotalEl.textContent = subtotal.toFixed(2);
+
+    if (taxEl)
+        taxEl.textContent = tax.toFixed(2);
+
+    if (totalEl)
+        totalEl.textContent = total.toFixed(2);
+
 }
