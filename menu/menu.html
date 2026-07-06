@@ -9,8 +9,8 @@
     <meta name="keywords" content="HIPOC, catering service, event catering, wedding catering, corporate catering">
     <meta name="author" content="HIPOC">
 
-  <script type="module" crossorigin src="/catering_final_project/assets/main-USXSQf4v.js"></script>
-  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-DcIv3wHl.css">
+  <script type="module" crossorigin src="/catering_final_project/assets/main-BFdiA4Y7.js"></script>
+  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-CKmiwhls.css">
 </head>
 
 <body>
@@ -84,7 +84,10 @@
 
         <!-- MOBILE CART BAR -->
         <div class="mobile-cart-bar">
-            <button id="open-cart">View Order</button>
+            <button id="open-cart">
+                View Order
+                (<span id="mobile-count">0</span>)
+            </button>
         </div>
 
         <!-- MOBILE CART DRAWER -->
@@ -92,28 +95,15 @@
 
             <div class="drawer-header">
                 <h3>Your Order</h3>
-                <button id="close-cart">X</button>
+                <button id="close-cart">X Close Menu</button>
             </div>
 
             <div id="mobile-cart-items"></div>
 
             <div class="drawer-footer">
+                <p>Tax: $<span id="mobile-tax">0.00</span></p>
                 <p>Total: $<span id="mobile-total">0.00</span></p>
             </div>
-
-        </div>
-
-        <!-- CHECKOUT BAR -->
-        <div class="checkout-bar">
-
-            <div class="checkout-summary">
-                <span>Items: <span id="item-count">0</span></span>
-                <span>Subtotal: $<span id="subtotal">0.00</span></span>
-                <span>Tax: $<span id="tax">0.00</span></span>
-                <span><strong>Total: $<span id="total">0.00</span></strong></span>
-            </div>
-
-            <button id="checkout-btn">Proceed to Checkout</button>
 
         </div>
 
