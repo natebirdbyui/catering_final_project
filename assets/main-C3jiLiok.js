@@ -84,19 +84,12 @@
     `).join(""),n.querySelectorAll(".plus").forEach(d=>{d.addEventListener("click",()=>Bt(d.dataset.id))}),n.querySelectorAll(".minus").forEach(d=>{d.addEventListener("click",()=>Ht(d.dataset.id))}),n.querySelectorAll(".mobile-cart-quantity").forEach(d=>{d.addEventListener("change",()=>{lr(d.dataset.id,d.value)})});const{tax:a=0,total:l=0,count:o=0}=t;r&&(r.textContent=a.toFixed(2)),i&&(i.textContent=l.toFixed(2)),s&&(s.textContent=o)}console.log("cartUI.js loaded");function Vi(){window.addEventListener("cart:update",t=>{tn(t.detail?.totals)}),tn({subtotal:0,tax:0,total:0})}function tn(t={}){const e=Z(),n=document.getElementById("cart-sidebar-items"),r=document.getElementById("cart-subtotal"),i=document.getElementById("cart-tax"),s=document.getElementById("cart-total");if(!n)return;if(e.length===0){n.innerHTML=`
             <p>Your order is empty.</p>
         `,r&&(r.textContent="0.00"),i&&(i.textContent="0.00"),s&&(s.textContent="0.00");return}n.innerHTML=e.map(d=>`
-
         <div class="cart-item">
-
             <span>${d.name}</span>
-
-
             <div class="qty-controls">
-
                 <button class="minus" data-id="${d.id}">
                     −
-                </button>
-                
-
+                </button>              
                 <span>${d.quantity}</span>
                 <input 
                     class="cart-quantity"
@@ -108,17 +101,11 @@
                 <button class="plus" data-id="${d.id}">
                     +
                 </button>
-
             </div>
-
-
             <span>
                 $${(d.price_per_serving*d.quantity).toFixed(2)}
             </span>
-
-
         </div>
-
     `).join(""),n.querySelectorAll(".plus").forEach(d=>{d.addEventListener("click",()=>{Bt(d.dataset.id)})}),n.querySelectorAll(".minus").forEach(d=>{d.addEventListener("click",()=>{Ht(d.dataset.id)})});const a=t.subtotal??0,l=t.tax??0,o=t.total??0;n.querySelectorAll(".cart-quantity").forEach(d=>{d.addEventListener("change",()=>{lr(d.dataset.id,d.value)})}),r&&(r.textContent=a.toFixed(2)),i&&(i.textContent=l.toFixed(2)),s&&(s.textContent=o.toFixed(2))}console.log("checkoutUI.js loaded");function Gi(){nn(),window.addEventListener("cart:update",nn)}function st(t){t&&(t.classList.remove("pop"),t.offsetWidth,t.classList.add("pop"))}function nn(){const t=Z(),e=document.getElementById("item-count"),n=document.getElementById("subtotal"),r=document.getElementById("tax"),i=document.getElementById("total");if(!n)return;const s=xt(t),a=Ot(s),l=Nt(s,a),o=sr(t);e&&(e.textContent=o),n.textContent=s.toFixed(2),r.textContent=a.toFixed(2),i.textContent=l.toFixed(2),st(n),st(r),st(i)}const qi="https://www.themealdb.com/api/json/v1/1/random.php";console.log("mealOfTheDay.js loaded");async function Qi(){const t=document.querySelector("#meal-of-the-day-content");if(t)try{const r=(await(await fetch(qi)).json()).meals[0];t.innerHTML=`
             <div class="meal-card">
                 <h3>${r.strMeal}</h3>
