@@ -1,4 +1,5 @@
 // utils.mjs
+console.log("utils.mjs loaded");
 export function loadNav() {   
     const BASE = import.meta.env.BASE_URL;
     return `

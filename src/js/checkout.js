@@ -6,9 +6,9 @@ import {
     calculateTotal
 } from "./checkoutProcess.mjs";
 
-export function initCheckout() {
-    
+console.log("checkout.js loaded");
 
+export function initCheckout() { 
     const container = document.getElementById("checkout-items");
     const subtotalEl = document.getElementById("subtotal");
     const taxEl = document.getElementById("tax");
@@ -22,15 +22,12 @@ export function initCheckout() {
         container.innerHTML = cart.map(item => `
             <div class="checkout-item">
                 <h3>${item.name}</h3>
-
                 <p>
                     $${item.price_per_serving} × ${item.quantity}
                 </p>
-
                 <p>
                     Subtotal: $${(item.price_per_serving * item.quantity).toFixed(2)}
                 </p>
-
                 <button data-id="${item.id}" class="minus">−</button>
                 <button data-id="${item.id}" class="plus">+</button>
             </div>
@@ -50,6 +47,5 @@ export function initCheckout() {
         clearCart();
         window.location.href = "/";
     });
-
     render();
 }

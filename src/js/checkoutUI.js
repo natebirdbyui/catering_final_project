@@ -6,7 +6,7 @@ import {
     calculateTotal,
     calculateItemCount
 } from "./checkoutProcess.mjs";
-
+console.log("checkoutUI.js loaded");
 export function initCheckoutBar() {
     render();
 

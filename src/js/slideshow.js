@@ -3,6 +3,7 @@ const BASE = import.meta.env.BASE_URL;
 
 let index = 0;
 let intervalId;
+console.log("slideshow.js loaded");
 
 export function loadSlideshow() {
     index = 0; // reset index when loading slideshow

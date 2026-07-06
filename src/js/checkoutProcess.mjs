@@ -1,4 +1,6 @@
 //checkoutProcess.mjs
+console.log("checkoutProcess.mjs loaded");
+
 export function calculateSubtotal(cart) {
     return cart.reduce((sum, item) => {
         return sum + (item.price_per_serving * item.quantity);

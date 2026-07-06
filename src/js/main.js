@@ -15,6 +15,9 @@ import { loadMealOfTheDay } from "./mealOfTheDay.js";
 import { initCalendar } from "./calendar.js";
 import { loadHolidays } from "./holidays.js";
 
+import { initCartPage } from "./cartPage.js";
+import { initGuestCalculator } from "./guestCalculator.js";
+
 console.log("main.js loaded:", location.pathname);
 
 async function initMenuPage() {
@@ -47,4 +50,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     initCartSidebar();
     initCheckoutBar();
     initMobileCart();
+    initCartPage();
+    initGuestCalculator();
 });

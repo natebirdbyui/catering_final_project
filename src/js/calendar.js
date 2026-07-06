@@ -2,6 +2,8 @@
 import { Calendar } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 
+console.log("calendar.js loaded");
+
 export function initCalendar() {
     const el = document.querySelector('#calendar');
 

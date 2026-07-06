@@ -1,5 +1,7 @@
 const API_URL = "https://date.nager.at/api/v3/PublicHolidays/2026/US";
 
+console.log("holidays.js loaded");
+
 export async function loadHolidays() {
     const container = document.querySelector("#holiday-container");
 

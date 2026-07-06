@@ -1,19 +1,16 @@
 // cart.js
-
 import {
     calculateSubtotal,
     calculateTax,
     calculateTotal,
     calculateItemCount
 } from "./checkoutProcess.mjs";
-
+console.log("cart.js loaded");
 const CART_KEY = "hipoc_cart";
-
 
 export function getCart() {
     return JSON.parse(localStorage.getItem(CART_KEY)) || [];
 }
-
 
 export function saveCart(cart) {
 
@@ -22,13 +19,11 @@ export function saveCart(cart) {
         JSON.stringify(cart)
     );
 
-
     // Central calculation system
     const subtotal = calculateSubtotal(cart);
     const tax = calculateTax(subtotal);
     const total = calculateTotal(subtotal, tax);
     const count = calculateItemCount(cart);
-
 
     window.dispatchEvent(
         new CustomEvent("cart:update", {
@@ -108,6 +103,29 @@ export function decreaseItem(id) {
         })
         .filter(item => item.quantity > 0);
 
+
+
+    saveCart(cart);
+}
+export function updateQuantity(id, quantity) {
+
+    const cart = getCart();
+
+    const item = cart.find(i => i.id == id);
+
+    if (!item) return;
+
+
+    let amount = Number(quantity);
+
+
+    // Protect against bad input
+    if (!Number.isInteger(amount) || amount < 1) {
+        amount = 1;
+    }
+
+
+    item.quantity = amount;
 
 
     saveCart(cart);

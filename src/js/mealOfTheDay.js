@@ -1,5 +1,5 @@
 const API_URL = "https://www.themealdb.com/api/json/v1/1/random.php";
-
+console.log("mealOfTheDay.js loaded");
 export async function loadMealOfTheDay() {
     const container = document.querySelector("#meal-of-the-day-content");
     if (!container) return;

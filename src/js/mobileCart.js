@@ -1,5 +1,5 @@
 // mobileCart.js
-import { getCart, increaseItem, decreaseItem } from "./cart.js";
+import { getCart, increaseItem, decreaseItem, updateQuantity } from "./cart.js";
 import { flyToCart } from "./cartAnimation.js";
 console.log("mobileCart.js loaded");
 
@@ -50,7 +50,12 @@ function renderMobileCart(totals = {}) {
 
             <div class="mobile-qty-controls">
                 <button class="minus" data-id="${item.id}">−</button>
-                <span>${item.quantity}</span>
+                <input
+                    class="mobile-cart-quantity"
+                    type="number"
+                    min="1"
+                    value="${item.quantity}"
+                    data-id="${item.id}">
                 <button class="plus" data-id="${item.id}">+</button>
             </div>
 
@@ -66,6 +71,12 @@ function renderMobileCart(totals = {}) {
 
     container.querySelectorAll(".minus").forEach(btn => {
         btn.addEventListener("click", () => decreaseItem(btn.dataset.id));
+    });
+
+    container.querySelectorAll(".mobile-cart-quantity").forEach(input => {
+        input.addEventListener("change", () => {
+            updateQuantity(input.dataset.id, input.value);
+        });
     });
 
     const { tax = 0, total = 0, count = 0 } = totals;

@@ -1,5 +1,5 @@
 //localStorage.js
-
+console.log("localStorage.js loaded");
 //retrieve data from local storage
 export function getLocalStorage(key) {
     return JSON.parse(localStorage.getItem(key));

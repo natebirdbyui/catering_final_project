@@ -1,4 +1,5 @@
 //cartAnimation.js
+console.log("cartAnimation.js loaded");
 export function flyToCart(startEl, cartEl) {
     if (!startEl || !cartEl) return;
 

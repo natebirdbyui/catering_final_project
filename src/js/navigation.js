@@ -1,3 +1,4 @@
+console.log("navigation.js loaded");
 export function initSidebarMenu() {
     const btn = document.querySelector(".nav-toggle");
     const sidebar = document.querySelector(".sidebar-nav");

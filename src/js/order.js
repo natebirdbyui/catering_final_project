@@ -1,5 +1,6 @@
 import { addToCart } from "./cart.js";
 import { flyToCart } from "./cartAnimation.js";
+console.log("order.js loaded");
 
 export function initOrderSystem(menuItems) {
     const menuList = document.getElementById("menu-list");
