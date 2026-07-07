@@ -9,8 +9,8 @@
     <meta name="keywords" content="HIPOC, catering service, event catering, wedding catering, corporate catering">
     <meta name="author" content="HIPOC">
 
-  <script type="module" crossorigin src="/catering_final_project/assets/main-C3jiLiok.js"></script>
-  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-kyJKdLww.css">
+  <script type="module" crossorigin src="/catering_final_project/assets/main-CJsp3RDI.js"></script>
+  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-CQ0HymCV.css">
 </head>
 
 <body>
@@ -106,29 +106,49 @@
         </div>
 
         <!-- MOBILE CART BAR -->
-        <div class="mobile-cart-bar">
-            <button id="open-cart">
-                View Order
-                (<span id="mobile-count">0</span>)
-            </button>
-        </div>
+<div class="mobile-cart-bar">
 
-        <!-- MOBILE CART DRAWER -->
-        <div class="mobile-cart-drawer">
+    <button id="open-cart">
 
-            <div class="drawer-header">
-                <h3>Your Order</h3>
-                <button id="close-cart">X Close Menu</button>
-            </div>
+        🛒 View Order
+        (<span id="mobile-count">0</span>)
 
-            <div id="mobile-cart-items"></div>
+    </button>
 
-            <div class="drawer-footer">
-                <p>Tax: $<span id="mobile-tax">0.00</span></p>
-                <p>Total: $<span id="mobile-total">0.00</span></p>
-            </div>
+</div>
 
-        </div>
+
+
+<!-- MOBILE CART DRAWER -->
+<div class="mobile-cart-drawer">
+
+    <div class="drawer-header">
+        <h3>Your Order</h3>
+        <button id="close-cart">
+            ✕ Close
+        </button>
+    </div>
+
+    <div id="mobile-cart-items"></div>
+
+    <div class="drawer-summary">
+        <p>
+            Tax:
+            $<span id="mobile-tax">0.00</span>
+        </p>
+
+        <p>
+            Total:
+            $<span id="mobile-total">0.00</span>
+        </p>
+
+        <button id="mobile-checkout">
+            Proceed to Checkout
+        </button>
+
+    </div>
+
+</div>
 
     </main>
 

@@ -8,52 +8,190 @@
     <meta name="keywords" content="HIPOC, booking, catering service, event catering, wedding catering, 
     corporate catering, private party catering, customizable menu, delicious cuisine">
     <meta name="author" content="HIPOC">
-  <script type="module" crossorigin src="/catering_final_project/assets/main-C3jiLiok.js"></script>
-  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-kyJKdLww.css">
+  <script type="module" crossorigin src="/catering_final_project/assets/main-CJsp3RDI.js"></script>
+  <link rel="stylesheet" crossorigin href="/catering_final_project/assets/main-CQ0HymCV.css">
 </head>
 <body>
     <header class="header-create">
         <!--header.js will insert header content here-->
     </header>
 
-    <main>
-        <h1>Booking</h1>
-        <h2>Please fill out the form below to book your event with Hope It Pans Out Catering. It will be our pleasure to serve you!</h2>
-
-        <section class="event-calendar">
+    <main class="booking-page">
+        <section class="booking-header">
+            <h1>Booking</h1>
+            <p>
+                Please fill out the form below to book your event with Hope It Pans Out Catering.
+                It will be our pleasure to serve you!
+            </p>
+        </section>
+        <section>
             <h2>📅 HIPOC Event Calendar</h2>
             <div id="calendar"></div>
         </section>
 
-        <form action="/" method="POST" id="checkout-form">
-            <fieldset>
+        <form action="/" method="POST" id="checkout-form" class="booking-form">
+            <fieldset class="form-section">
                 <legend>Contact Information</legend>
                 <label for="fname">First Name:</label>
-                <input type="text" id="fname" name="fname" required>
+                <input 
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="John"
+                    required>
 
                 <label for="lname">Last Name:</label>
-                <input type="text" id="lname" name="lname" required>
+                <input 
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Doe"
+                    required>
+
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="123-456-7890"
+                    pattern="^\d{10}$"
+                    required>
+
+                <label for="email">Email Address:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="john.doe@example.com"
+                    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    required>
 
                 <label for="street">Street</label>
-                <input type="text" name="street" id="street" required />
+                <input
+                    type="text"
+                    name="street"
+                    id="street"
+                    placeholder="123 Main St"
+                    required />
 
                 <label for="city">City</label>
-                <input type="text" name="city" id="city" required />
+                <input
+                    type="text"
+                    name="city"
+                    id="city"
+                    placeholder="Anytown"
+                    required />
 
                 <label for="state">State</label>
-                <input type="text" name="state" id="state" required />
+                <input
+                    type="text"
+                    name="state"
+                    id="state"
+                    placeholder="CA"
+                    required />
 
                 <label for="zip">Zip</label>
-                <input type="text" name="zip" id="zip" pattern="^[0-9]{5}$" required />
+                <input
+                    type="text"
+                    name="zip"
+                    id="zip"
+                    placeholder="12345"
+                    pattern="^[0-9]{5}$"
+                    required />
             </fieldset>
+            <fieldset class="event-info">
 
-            <fieldset>
+            <legend>Event Information</legend>
+
+
+            <label for="event-name">
+                Event Name / Occasion:
+            </label>
+
+            <input 
+                type="text"
+                id="event-name"
+                name="event-name"
+                placeholder="Wedding, Birthday, Corporate Lunch">
+
+
+            <label for="event-date">
+                Event Date:
+            </label>
+
+            <input 
+                type="date"
+                id="event-date"
+                name="event-date"
+                required>
+
+
+            <label for="event-time">
+                Event Time:
+            </label>
+
+            <input 
+                type="time"
+                id="event-time"
+                name="event-time"
+                required>
+
+
+            <label for="event-type">
+                Event Type:
+            </label>
+
+            <select 
+                id="event-type"
+                name="event-type">
+
+                <option value="">
+                    Select an Event Type
+                </option>
+
+                <option value="wedding">
+                    Wedding
+                </option>
+
+                <option value="birthday">
+                    Birthday Party
+                </option>
+
+                <option value="corporate">
+                    Corporate Event
+                </option>
+
+                <option value="private">
+                    Private Gathering
+                </option>
+
+                <option value="other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="notes">
+                Special Instructions:
+            </label>
+
+            <textarea 
+                id="notes"
+                name="notes"
+                rows="5"
+                placeholder="Dietary needs, setup instructions, special requests...">
+            </textarea>
+        </fieldset>
+
+            <fieldset class="form-section">
                 <legend>Payment</legend>
                     <label for="cardNumber">Card Number</label>
                     <input
                     type="text"
                     name="cardNumber"
                     id="cardNumber"
+                    placeholder="1234 5678 9012 3456"
                     pattern="^[0-9]{16}$"
                     required
                     />
@@ -63,6 +201,7 @@
                     name="expiration"
                     id="expiration"
                     pattern="^(0[1-9]|1[0-2])\/\d{2}$"
+                    placeholder="MM/YY"
                     required
                     />
                     <label for="code">Security Code</label>
@@ -72,28 +211,47 @@
                     id="code"
                     minlength="3"
                     maxlength="4"
+                    placeholder="123 or 1234"
                     required
                     />
             </fieldset>
 
+            <fieldset class="selected-order">
+                <legend>Your Catering Selection</legend>
+                <div id="booking-items">
+                    <!-- Cart items load here -->
+                </div>
+
+            </fieldset>
+            <section class="booking-guests">
+                <h3>Event Details</h3>
+                <p>
+                    Number of Guests:
+                    <strong>
+                        <span id="booking-guests">0</span>
+                    </strong>
+                </p>
+
+            </section>
             <fieldset class="order-summary">
                 <legend>Order Summary</legend>
                 <div>
-                    <p>Item Subtotal (<span id="item-count"></span>)</p>
-                    <p id="item-subtotal">$</p>
+                    <p>Item Subtotal (<span id="item-count">0</span>)</p>
+                    <p>$<span id="subtotal">0.00</span></p>
                 </div>
 
                 <div>
                     <p>Tax</p>
-                    <p id="tax">$</p>
+                    <p>$<span id="tax">0.00</span></p>
                 </div>
+
                 <div>
                     <p><b>Order Total</b></p>
-                    <p id="orderTotal">$</p>
+                    <p>$<span id="total">0.00</span></p>
                 </div>
         </fieldset>
 
-            <button type="submit">Checkout</button>
+            <button type="submit">Complete Booking</button>
         </form>
 
     </main>
