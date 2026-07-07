@@ -1,3 +1,4 @@
+// checkoutNavigation.js
 console.log("checkoutNavigation.js loaded");
 
 export function initCheckoutNavigation() {

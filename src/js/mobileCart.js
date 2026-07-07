@@ -1,6 +1,12 @@
 // mobileCart.js
 import { getCart, increaseItem, decreaseItem, updateQuantity } from "./cart.js";
 import { flyToCart } from "./cartAnimation.js";
+import {
+    calculateSubtotal,
+    calculateTax,
+    calculateTotal,
+    calculateItemCount
+} from "./checkoutProcess.mjs";
 console.log("mobileCart.js loaded");
 
 export function initMobileCart() {
@@ -21,7 +27,7 @@ export function initMobileCart() {
 
     if (!drawer || !openBtn || !closeBtn) return;
 
-    openBtn.addEventListener("click", () => {q
+    openBtn.addEventListener("click", () => {
         drawer.classList.add("open");
     });
 
@@ -71,7 +77,11 @@ function renderMobileCart(totals = {}) {
             </div>
 
             <span>
-                $${(item.price_per_serving * item.quantity).toFixed(2)}
+                $${(
+                    item.quantity *
+                    item.servings_per_tray *
+                    item.price_per_serving
+                ).toFixed(2)}
             </span>
         </div>
     `).join("");
@@ -90,7 +100,10 @@ function renderMobileCart(totals = {}) {
         });
     });
 
-    const { tax = 0, total = 0, count = 0 } = totals;
+    const subtotal = calculateSubtotal(cart);
+    const tax = calculateTax(subtotal);
+    const total = calculateTotal(subtotal, tax);
+    const count = calculateItemCount(cart);
 
     if (taxEl) taxEl.textContent = tax.toFixed(2);
     if (totalEl) totalEl.textContent = total.toFixed(2);
