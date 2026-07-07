@@ -8,6 +8,7 @@
 @import "./partials/menu.css";
 @import "./partials/mobile.css";
 @import "./partials/cart-page.css";
+@import "./partials/booking.css";
 
 body {
     background-color: #e5e5e5;
@@ -15,4 +16,17 @@ body {
 }
 h1 {
     text-align: center;
+}
+.checkout-message {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+.checkout-message h2 {
+    margin-bottom: 15px;
 }

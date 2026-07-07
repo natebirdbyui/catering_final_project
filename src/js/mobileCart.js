@@ -7,10 +7,21 @@ export function initMobileCart() {
     const drawer = document.querySelector(".mobile-cart-drawer");
     const openBtn = document.getElementById("open-cart");
     const closeBtn = document.getElementById("close-cart");
+    const checkoutBtn = document.getElementById("mobile-checkout");
+
+    if (checkoutBtn) {
+
+        checkoutBtn.addEventListener("click", () => {
+
+            window.location.href = "../cart/cart.html";
+
+        });
+
+    }
 
     if (!drawer || !openBtn || !closeBtn) return;
 
-    openBtn.addEventListener("click", () => {
+    openBtn.addEventListener("click", () => {q
         drawer.classList.add("open");
     });
 

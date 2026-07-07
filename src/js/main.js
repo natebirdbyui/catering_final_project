@@ -1,4 +1,5 @@
 // main.js
+import { initCheckoutNavigation } from "./checkoutNavigation.js";
 import { loadHeader } from "./header.js";
 import { loadFooter } from "./footer.js";
 import { loadSlideshow } from "./slideshow.js";
@@ -16,7 +17,11 @@ import { initCalendar } from "./calendar.js";
 import { loadHolidays } from "./holidays.js";
 
 import { initCartPage } from "./cartPage.js";
+import {initBookingPage} from "./booking.js";
 import { initGuestCalculator } from "./guestCalculator.js";
+
+import { initBookingValidation } from "./bookingValidation.js";
+import { initCheckoutComplete } from "./checkoutComplete.js";
 
 console.log("main.js loaded:", location.pathname);
 
@@ -52,4 +57,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     initMobileCart();
     initCartPage();
     initGuestCalculator();
+    initCheckoutNavigation();
+    initBookingPage();
+    initBookingValidation();
+    initCheckoutComplete();
 });

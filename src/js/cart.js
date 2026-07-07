@@ -40,101 +40,70 @@ export function saveCart(cart) {
     );
 }
 
-
-
 export function addToCart(item) {
-
     const cart = getCart();
-
-    const existing = cart.find(
-        i => i.id == item.id
-    );
-
+    const existing = cart.find(i => i.id == item.id);
 
     if (existing) {
-        existing.quantity++;
-    } 
-    else {
+        existing.quantity = item.quantity;
+        existing.guests_requested =
+            item.guests_requested;
+        existing.trays_needed =
+            item.trays_needed;
+        existing.servings_purchased =
+            item.servings_purchased;
+        existing.estimated_cost =
+            item.estimated_cost;
+    } else {
         cart.push({
-            ...item,
-            quantity: 1
+            ...item
         });
     }
-
 
     saveCart(cart);
 }
 
-
-
 export function increaseItem(id) {
-
     const cart = getCart();
-
     const item = cart.find(
         i => i.id == id
     );
 
-
     if (item) {
         item.quantity++;
     }
-
-
     saveCart(cart);
 }
 
-
-
 export function decreaseItem(id) {
-
     let cart = getCart();
-
-
     cart = cart
         .map(item => {
-
             if (item.id == id) {
                 item.quantity--;
             }
-
             return item;
-
         })
         .filter(item => item.quantity > 0);
 
-
-
     saveCart(cart);
 }
+
 export function updateQuantity(id, quantity) {
-
     const cart = getCart();
-
     const item = cart.find(i => i.id == id);
 
     if (!item) return;
-
-
     let amount = Number(quantity);
-
 
     // Protect against bad input
     if (!Number.isInteger(amount) || amount < 1) {
         amount = 1;
     }
-
-
     item.quantity = amount;
-
-
     saveCart(cart);
 }
 
-
-
 export function clearCart() {
-
     saveCart([]);
-
 }

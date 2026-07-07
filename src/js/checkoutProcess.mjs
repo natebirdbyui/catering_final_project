@@ -3,8 +3,10 @@ console.log("checkoutProcess.mjs loaded");
 
 export function calculateSubtotal(cart) {
     return cart.reduce((sum, item) => {
-        return sum + (item.price_per_serving * item.quantity);
-    }, 0);
+        return sum + (item.price_per_serving *
+        item.quantity *
+        item.servings_per_tray);
+            }, 0);
 }
 
 export function calculateTax(subtotal, rate = 0.06) {

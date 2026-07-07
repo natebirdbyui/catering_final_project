@@ -1,23 +1,44 @@
-// guestCalculator.js
-
+import { loadMenu } from "./menu.js";
 import { displayMenuItems } from "./menuDisplay.js";
-import { getMenu } from "./menu.js";
+const GUEST_KEY = "hipoc_guest_count";
 
 console.log("guestCalculator.js loaded");
 
 export function initGuestCalculator() {
-    const guestInput = document.getElementById("guest-count");
-    if (!guestInput) return;
+    const input = document.getElementById("guest-count");
+    if (!input) return;
 
-    guestInput.addEventListener("input", () => {
-        let guests = Number(guestInput.value);
+    const savedGuests = localStorage.getItem(GUEST_KEY);
+    if (savedGuests) {
+        input.value = savedGuests;
+    }
 
-        // Protect against bad input
+    input.addEventListener("input", async () => {
+        let guests = Number(input.value);
         if (!Number.isInteger(guests) || guests < 1) {
-            guestInput.value = 1;
-            guests = 1;
+            input.value = "";
+            return;
         }
-        const menu = getMenu();
-        displayMenuItems(menu, guests);
+
+        if (guests > 2000) {
+            guests = 2000;
+            input.value = guests;
+        }
+
+
+        localStorage.setItem(
+            GUEST_KEY,
+            guests
+        );
+
+
+        // tell menu cards to refresh
+        window.dispatchEvent(
+            new Event("guest:update")
+        );
+
+        const menu = await loadMenu();
+        displayMenuItems(menu);
+        localStorage.setItem(GUEST_KEY, guests);
     });
 }

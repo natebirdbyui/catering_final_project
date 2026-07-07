@@ -194,6 +194,15 @@
         text-align: center;
         padding: 10px;
     }
+    .mobile-cart-bar button {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
 
     .menu-layout {
         flex-direction: column;

@@ -58,7 +58,11 @@ function renderCart(totals = {}) {
                 </button>
             </div>
             <span>
-                $${(item.price_per_serving * item.quantity).toFixed(2)}
+                $${(
+                    item.quantity *
+                    item.servings_per_tray *
+                    item.price_per_serving
+                ).toFixed(2)}
             </span>
         </div>
     `).join("");

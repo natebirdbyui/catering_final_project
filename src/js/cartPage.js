@@ -26,10 +26,18 @@ function renderCartPage() {
     const cart = getCart();
     const container = document.getElementById("cart-page-items");
     const subtotalEl = document.getElementById("page-subtotal");
+    const guestDisplay = document.getElementById("guest-count");
     const taxEl = document.getElementById("page-tax");
     const totalEl = document.getElementById("page-total");
 
     if (!container) return;
+
+    if (guestDisplay && cart.length > 0) {
+
+        guestDisplay.textContent =
+            cart[0].guests_requested || 0;
+
+    }
 
     // EMPTY CART
     if (cart.length === 0) {
