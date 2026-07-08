@@ -9,6 +9,8 @@
 @import "./partials/mobile.css";
 @import "./partials/cart-page.css";
 @import "./partials/booking.css";
+@import "./partials/contact-us.css";
+@import "./partials/about-us.css";
 
 body {
     background-color: #e5e5e5;

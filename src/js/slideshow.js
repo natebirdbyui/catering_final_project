@@ -32,6 +32,22 @@ export function loadSlideshow() {
             <div class="slide">
                 <img src="${BASE}images/chef/meet_the_chef_nate.jpg" alt="slide5">
             </div>
+
+            <div class="slide">
+                <img src="${BASE}images/food/steak_and_tators.jpg" alt="slide6">
+            </div>
+
+            <div class="slide">
+                <img src="${BASE}images/food/pit_style_beans.jpg" alt="slide7">
+            </div>
+
+            <div class="slide">
+                <img src="${BASE}images/food/texas_twinkie.jpg" alt="slide8">
+            </div>
+
+            <div class="slide">
+                <img src="${BASE}images/food/chicken_bombs.jpg" alt="slide9">
+            </div>
         </div>
     `;
 

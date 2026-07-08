@@ -4,6 +4,7 @@ import { loadHeader } from "./header.js";
 import { loadFooter } from "./footer.js";
 import { loadSlideshow } from "./slideshow.js";
 import { initSidebarMenu } from "./navigation.js";
+import { loadAboutUsSlideshow } from "./aboutUs.js";
 
 import { loadMenu } from "./menu.js";
 import { displayMenuItems } from "./menuDisplay.js";
@@ -41,6 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     loadHeader();
     loadFooter();
     loadSlideshow();
+    loadAboutUsSlideshow();
     initSidebarMenu();
 
     // homepage features
