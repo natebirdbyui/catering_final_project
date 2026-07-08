@@ -79,8 +79,118 @@
             "name": "Tacos al Pastor",
             "servings_per_tray": 12,
             "price_per_serving": 3.50,
-            "description": "Perfected pork tacos marinated in a blend of spices and pineapple, white onion, cilantro, and lime. Our co-owner's favorite taco when he served his mission in Mexico! He knows the flavor, and he perfected it like a real taquero!",
+            "description": "Perfected pork tacos marinated in a blend of spices and pineapple, white onion, cilantro, and lime. Our owner's favorite taco when he served his mission in Mexico! He knows the flavor, and he perfected it like a real taquero!",
             "image": "/images/food/rsz_tacos_alpastor.jpg"
+        },
+        {
+                "id": 10,
+                "category": "Refreshments",
+                "name": "Lemonade",
+                "servings_per_tray": 12,
+                "price_per_serving": 1.50,
+                "description": "Refreshing hand-squeezed lemonade, our owner has perfected this recipe from his time working for Chick-fil-A.",
+                "image": "/images/drinks/lemonade.jpg"
+        },
+        {
+                "id": 11,
+                "category": "Refreshments",
+                "name": "Soda",
+                "servings_per_tray": 12,
+                "price_per_serving": 1.50,
+                "description": "Delicious homemade soda, perfect for any occasion.",
+                "image": "/images/drinks/sodas.jpg"
+        },
+        {
+                "id": 12,
+                "category": "Refreshments",
+                "name": "Horchata",
+                "servings_per_tray": 12,
+                "price_per_serving": 1.50,
+                "description": "Delicious homemade horchata, a traditional Mexican rice drink flavored with cinnamon and vanilla. Nathan has mastered this recipe from his time living in Mexico.",
+                "image": "/images/drinks/horchata.jpg"
+        },
+        {
+                "id": 13,
+                "category": "Sides",
+                "name": "Macaroni Salad",
+                "servings_per_tray": 12,
+                "price_per_serving": 2.00,
+                "description": "Creamy and delicious macaroni salad made from the heart. From our kitchen to your table!",
+                "image": "/images/food/macaroni_salad.jpg"
+        },
+        {
+                "id": 14,
+                "category": "Sides",
+                "name": "Potato Salad",
+                "servings_per_tray": 12,
+                "price_per_serving": 2.00,
+                "description": "Creamy and delicious potato salad, this potato salad has many great seasonings to make your taste buds dance.",
+                "image": "/images/food/potato_salad.jpg"
+        },
+        {
+                "id": 15,
+                "category": "Sides",
+                "name": "Chef Salad",
+                "servings_per_tray": 12,
+                "price_per_serving": 2.50,
+                "description": "Crisp and refreshing chef salad, a perfect side dish for any meal.",
+                "image": "/images/food/chef_salad.jpg"
+        },
+        {
+                "id": 16,
+                "category": "Sides",
+                "name": "Pit Style Baked Beans",
+                "servings_per_tray": 20,
+                "price_per_serving": 2.00,
+                "description": "Delicious pit style baked beans, you don't like beans, this will change your mind!",
+                "image": "/images/food/pit_style_beans.jpg"
+        },
+        {
+                "id": 17,
+                "category": "Sides",
+                "name": "Boston Market Sweet Potato Casserole",
+                "servings_per_tray": 20,
+                "price_per_serving": 1.50,
+                "description": "Delicious Boston Market sweet potato casserole, a perfect side dish for any meal.",
+                "image": "/images/food/rsz_1sweet_potato_casserole.jpg"
+        },
+        {
+                "id": 18,
+                "category": "Sides",
+                "name": "Texas Twinkie",
+                "servings_per_tray": 12,
+                "price_per_serving": 1.50,
+                "description": "Delicious Texas Twinkie, this is a great side dish that will make a meal of itself. We know you can't have just one bite.",
+                "image": "/images/food/texas_twinkie.jpg"
+        },
+        {
+                "id": 19,
+                "category": "Entree",
+                "name": "Steak and Potatoes",
+                "servings_per_tray": 8,
+                "price_per_serving": 6.00,
+                "description": "Juicy steak served with perfectly smoked-baked potatoes, a hearty entree to make the party right.",
+                "image": "/images/food/steak_and_tators.jpg"
+        },
+        {
+                "id": 20,
+                "category": "Entree",
+                "name": "Tri-TipSteak and Potatoes",
+                "servings_per_tray": 12,
+                "price_per_serving": 8.50,
+                "description": "Juicy tri-tip steak served with perfectly smoked-baked potatoes, a hearty entree that will make your guests talk about it for years.",
+                "image": "/images/food/steak_n_potatoes.jpg"
+        },
+        {
+                "id":21,
+                "category": "Entree",
+                "name": "Smoked Bacon Wrapped Chicken Bombs",
+                "servings_per_tray": 8,
+                "price_per_serving": 7.00,
+                "description": "Smoked bacon wrapped chicken bombs, a flavorful and indulgent entree option. These bombs are made with tender chicken breasts stuffed with a savory filling, wrapped in crispy bacon, and smoked to perfection. The result is a deliciously smoky and juicy dish that will satisfy any meat lover's cravings.",
+                "image": "/images/food/chicken_bombs.jpg"
         }
+
+
     ]
 }
