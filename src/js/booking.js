@@ -11,19 +11,12 @@ import {
 console.log("booking.js loaded");
 
 export function initBookingPage() {
-
     const cart = getCart();
-
     renderBookingItems(cart);
-    renderBookingSummary(cart);
-
-}
+    renderBookingSummary(cart);}
 function renderBookingItems(cart) {
-
     const container = document.getElementById("booking-items");
-
     if (!container) return;
-
     if (cart.length === 0) {
         container.innerHTML =
             "<p>No catering items selected.</p>";
@@ -57,18 +50,14 @@ function renderBookingItems(cart) {
     `).join("");
 }
 function renderBookingSummary(cart) {
-
     const guestsEl = document.getElementById("booking-guests");
-
     const itemCount = document.getElementById("item-count");
     const subtotalEl = document.getElementById("subtotal");
     const taxEl = document.getElementById("tax");
     const totalEl = document.getElementById("total");
-
     const subtotal = calculateSubtotal(cart);
     const tax = calculateTax(subtotal);
     const total = calculateTotal(subtotal, tax);
-
     const count = calculateItemCount(cart);
 
     if (itemCount)
@@ -87,5 +76,4 @@ function renderBookingSummary(cart) {
         guestsEl.textContent =
             cart[0].guests_requested;
     }
-
 }

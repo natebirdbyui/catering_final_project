@@ -1,8 +1,5 @@
 /*mobile.css */
-@media (max-width: 768px) {
-
-    
-
+@media (max-width: 768px) { 
     /* HEADER */
     .header-top {
         display: flex;
@@ -18,20 +15,16 @@
     display: block;
     position: relative;   /* IMPORTANT */
     z-index: 3000;
-
     font-size: 2rem;
     color: white;
     background: none;
     border: none;
     cursor: pointer;
-
     flex-shrink: 0;
-
     transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
     opacity: 1;
     transform: scale(1);
     visibility: visible;
-
     }
 
     .nav-toggle.hidden {
@@ -76,13 +69,10 @@
         position: fixed;
         inset: 0;
         background: rgba(0,0,0,0.4);
-
         z-index: 1000;
-
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-
         transition: opacity 0.3s ease, visibility 0.3s ease;
     }
 
@@ -99,7 +89,6 @@
         left: -260px;
         width: 260px;
         height: 100vh;
-
         background-color: #283618;
         display: flex;
         transition: left 0.3s ease;
@@ -108,21 +97,16 @@
 
     .checkout-bar {
         display: flex;
-
         position: fixed;
         bottom: 0;
         left: 0;
         right: 0;
-
         background: #52381D;
         color: white;
-
         justify-content: space-between;
         align-items: center;
-
         padding: 12px 20px;
         z-index: 5000;
-
         transform: translateY(100%);
         transition: transform 0.25s ease;
     }
@@ -160,8 +144,6 @@
     .desktop-nav {
         display: none;
     }
-
-
 
     .cart-header {
         order: 3;   /* moves "Your Order" to bottom */
@@ -264,7 +246,6 @@
         min-width: 70px;
         text-align: right;
     }
-
 }
 
 

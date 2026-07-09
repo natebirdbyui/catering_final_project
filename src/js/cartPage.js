@@ -1,3 +1,4 @@
+//cartPage.js
 import { 
     getCart,
     increaseItem,
@@ -10,9 +11,7 @@ import {
     calculateTotal
 } from "./checkoutProcess.mjs";
 
-
 console.log("cartPage.js loaded");
-
 
 export function initCartPage() {
     renderCartPage();
@@ -33,12 +32,10 @@ function renderCartPage() {
     if (!container) return;
 
     if (guestDisplay && cart.length > 0) {
-
         guestDisplay.textContent =
             cart[0].guests_requested || 0;
-
     }
-
+    
     // EMPTY CART
     if (cart.length === 0) {
         container.innerHTML = `

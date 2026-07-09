@@ -25,12 +25,10 @@ export function initGuestCalculator() {
             input.value = guests;
         }
 
-
         localStorage.setItem(
             GUEST_KEY,
             guests
         );
-
 
         // tell menu cards to refresh
         window.dispatchEvent(

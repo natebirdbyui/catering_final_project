@@ -87,6 +87,7 @@ export function initBookingSubmit() {
     });
 }
 
+//when you finish the booking, show a complete message and clear the form. Added a celebration emoji for fun!
 function showCompleteMessage() {
     const form = document.getElementById("checkout-form");
     if (!form) return;

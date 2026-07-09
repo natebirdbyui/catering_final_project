@@ -19,7 +19,7 @@ export function initOrderSystem(menuItems) {
 
         addToCart(item);
 
-        // 🔥 ANIMATION TRIGGER
+        // ANIMATION TRIGGER
         flyToCart(img, cartTarget);
     });
 }

@@ -1,69 +1,44 @@
 .cart-page-layout {
-
     display:flex;
     gap:30px;
     align-items:flex-start;
-
 }
 
-
 .cart-page-items {
-
     flex:2;
 }
 
-
 .cart-page-summary {
-
     flex:1;
-
     background:white;
     padding:20px;
     border-radius:12px;
-
 }
 
 
 .cart-page-item {
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:15px;
-
     background:white;
-
     border-bottom:1px solid #ddd;
-
 }
 
 
 #page-checkout-btn {
-
     width:100%;
-
     margin-top:20px;
-
     padding:12px;
-
     background:#52381D;
-
     color:white;
-
     border:none;
-
     border-radius:6px;
-
 }
 
 
 @media(max-width:768px){
-
     .cart-page-layout{
-
         flex-direction:column;
-
     }
-
 }

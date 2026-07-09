@@ -13,7 +13,6 @@ export function getCart() {
 }
 
 export function saveCart(cart) {
-
     localStorage.setItem(
         CART_KEY,
         JSON.stringify(cart)
@@ -40,6 +39,10 @@ export function saveCart(cart) {
     );
 }
 
+// This function is called when the user submits the booking form.
+//  It gathers all the information from the form, along with the current cart contents,
+//  and saves it to localStorage as a booking object.
+// Also lets you add or delete items from the cart, and updates the cart totals accordingly.
 export function addToCart(item) {
     const cart = getCart();
     const existing = cart.find(i => i.id == item.id);
@@ -68,7 +71,6 @@ export function increaseItem(id) {
     const item = cart.find(
         i => i.id == id
     );
-
     if (item) {
         item.quantity++;
     }

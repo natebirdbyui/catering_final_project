@@ -1,4 +1,10 @@
 //cartAnimation.js
+// Thought it will be nice with some fun aninmation to keep the user engaged.
+//  When they click "Add to Cart", the item image will fly to the cart icon in the header, 
+// and the cart icon will do a little pulse animation to show that it was updated. 
+// This is done by cloning the item image, animating it to the cart position, and then removing it from the DOM.
+//  The cart icon animation is triggered by adding and removing a CSS class that defines a keyframe animation.
+//  This adds a nice touch of interactivity and feedback for the user when they add items to their cart.
 console.log("cartAnimation.js loaded");
 export function flyToCart(startEl, cartEl) {
     if (!startEl || !cartEl) return;

@@ -10,7 +10,8 @@ export function loadSlideshow() {
     console.log(document.querySelector(".hero-banner"));
     const slideshowEl = document.querySelector(".hero-banner");
     if (!slideshowEl) return;
-
+    // set up the slideshow HTML plus had the first image with fetchpriority="high" to ensure it loads quickly for a good user experience.
+    //  The rest of the images are set to loading="lazy" to optimize performance and increase lighthouse scores.
     slideshowEl.innerHTML = `
         <div class="slideshow">
             <div class="slide active">
@@ -51,7 +52,7 @@ export function loadSlideshow() {
         </div>
     `;
 
-    startSlideshow(); // ✅ correct place
+    startSlideshow(); // correct place
 }
 
 export function startSlideshow() {

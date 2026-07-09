@@ -1,11 +1,9 @@
 // cartUI.js
-
 import { getCart, increaseItem, decreaseItem, updateQuantity } from "./cart.js";
 
 console.log("cartUI.js loaded");
 
 export function initCartSidebar() {
-
     window.addEventListener("cart:update", (e) => {
         renderCart(e.detail?.totals);
     });

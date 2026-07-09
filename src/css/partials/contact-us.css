@@ -61,11 +61,9 @@ main {
 
 /* Mobile */
 @media (max-width: 768px) {
-
     main {
         padding: 1rem;
     }
-
     .contact-info,
     .contact-form {
         margin: 25px auto;
