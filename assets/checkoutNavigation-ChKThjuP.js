@@ -1,0 +1,1 @@
+console.log("checkoutNavigation.js loaded");function e(){const t=document.getElementById("checkout-btn");t&&t.addEventListener("click",()=>{window.location.href="../cart/cart.html"});const o=document.getElementById("page-checkout-btn");o&&o.addEventListener("click",()=>{window.location.href="../booking/booking.html"})}export{e as initCheckoutNavigation};

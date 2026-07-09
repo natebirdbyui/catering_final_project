@@ -143,7 +143,7 @@
                 "servings_per_tray": 20,
                 "price_per_serving": 2.00,
                 "description": "Delicious pit style baked beans, you don't like beans, this will change your mind!",
-                "image": "/images/food/pit_style_beans.jpg"
+                "image": "/images/food/rsz_pit_style_beans.jpg"
         },
         {
                 "id": 17,
@@ -161,7 +161,7 @@
                 "servings_per_tray": 12,
                 "price_per_serving": 1.50,
                 "description": "Delicious Texas Twinkie, this is a great side dish that will make a meal of itself. We know you can't have just one bite.",
-                "image": "/images/food/texas_twinkie.jpg"
+                "image": "/images/food/rsz_1texas_twinkie.jpg"
         },
         {
                 "id": 19,
@@ -170,7 +170,7 @@
                 "servings_per_tray": 8,
                 "price_per_serving": 6.00,
                 "description": "Juicy steak served with perfectly smoked-baked potatoes, a hearty entree to make the party right.",
-                "image": "/images/food/steak_and_tators.jpg"
+                "image": "/images/food/rsz_steak_and_tators.jpg"
         },
         {
                 "id": 20,
@@ -179,7 +179,7 @@
                 "servings_per_tray": 12,
                 "price_per_serving": 8.50,
                 "description": "Juicy tri-tip steak served with perfectly smoked-baked potatoes, a hearty entree that will make your guests talk about it for years.",
-                "image": "/images/food/steak_n_potatoes.jpg"
+                "image": "/images/food/rsz_steak_n_potatoes.jpg"
         },
         {
                 "id":21,
@@ -188,7 +188,7 @@
                 "servings_per_tray": 8,
                 "price_per_serving": 7.00,
                 "description": "Smoked bacon wrapped chicken bombs, a flavorful and indulgent entree option. These bombs are made with tender chicken breasts stuffed with a savory filling, wrapped in crispy bacon, and smoked to perfection. The result is a deliciously smoky and juicy dish that will satisfy any meat lover's cravings.",
-                "image": "/images/food/chicken_bombs.jpg"
+                "image": "/images/food/rsz_chicken_bombs.jpg"
         }
 
 
