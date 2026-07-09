@@ -13,31 +13,31 @@ export function loadAboutUsSlideshow() {
     aboutUsSlideShowEl.innerHTML = `
         <div class="slideshow">
             <div class="slide active">
-                <img src="${BASE}images/chef/chef_foodprep.jpg" alt="slide1">
+                <img src="${BASE}images/chef/chef_foodprep.jpg" alt="slide1" fetchpriority="high">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/chef/rsz_meet_the_chef_nate.webp" alt="slide2">
+                <img src="${BASE}images/chef/rsz_meet_the_chef_nate.webp" alt="slide2" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/chef/nate_jello.jpg" alt="slide3">
+                <img src="${BASE}images/chef/nate_jello.jpg" alt="slide3" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/chef/nate_taco_compas.jpg" alt="slide4">
+                <img src="${BASE}images/chef/nate_taco_compas.jpg" alt="slide4" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/chef/nate_tacos.jpg" alt="slide5">
+                <img src="${BASE}images/chef/nate_tacos.jpg" alt="slide5" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/chef/nate_tamal.jpg" alt="slide6">
+                <img src="${BASE}images/chef/nate_tamal.jpg" alt="slide6" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/chef/taco_compa_grill.jpg" alt="slide7">
+                <img src="${BASE}images/chef/taco_compa_grill.jpg" alt="slide7" loading="lazy">
         </div>
     `;
 

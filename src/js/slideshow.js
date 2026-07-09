@@ -14,39 +14,39 @@ export function loadSlideshow() {
     slideshowEl.innerHTML = `
         <div class="slideshow">
             <div class="slide active">
-                <img src="${BASE}images/logo_and_banner/steak-1359897_1920.webp" alt="slide1">
+                <img src="${BASE}images/logo_and_banner/steak-1359897_1920.webp" alt="slide1" fetchpriority="high">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/food/rsz_bacon_wrap_pork.jpg" alt="slide2">
+                <img src="${BASE}images/food/rsz_bacon_wrap_pork.jpg" alt="slide2" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/food/rsz_complete_bbq.jpg" alt="slide3">
+                <img src="${BASE}images/food/rsz_complete_bbq.jpg" alt="slide3" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/food/rsz_bbq_hamburger_hotdog.jpg" alt="slide4">
+                <img src="${BASE}images/food/rsz_bbq_hamburger_hotdog.jpg" alt="slide4" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/chef/meet_the_chef_nate.jpg" alt="slide5">
+                <img src="${BASE}images/chef/rsz_meet_the_chef_nate.webp" alt="slide5" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/food/steak_and_tators.jpg" alt="slide6">
+                <img src="${BASE}images/food/rsz_steak_and_tators.jpg" alt="slide6" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/food/pit_style_beans.jpg" alt="slide7">
+                <img src="${BASE}images/food/rsz_pit_style_beans.jpg" alt="slide7" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/food/texas_twinkie.jpg" alt="slide8">
+                <img src="${BASE}images/food/rsz_1texas_twinkie.jpg" alt="slide8" loading="lazy">
             </div>
 
             <div class="slide">
-                <img src="${BASE}images/food/chicken_bombs.jpg" alt="slide9">
+                <img src="${BASE}images/food/rsz_chicken_bombs.jpg" alt="slide9" loading="lazy">
             </div>
         </div>
     `;

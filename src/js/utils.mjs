@@ -10,7 +10,10 @@ export function loadNav() {
                 <figure>
                     <picture>
                         <source srcset="${BASE}images/logo_and_banner/rsz_rsz_1logo.png" type="image/webp">
-                        <img src="${BASE}images/logo_and_banner/rsz_rsz_1logo.png" alt="Logo">
+                        <img src="${BASE}images/logo_and_banner/rsz_rsz_1logo.png"
+                        alt="HIPOC Logo"
+                        width="250"
+                        height="250">
                     </picture>
                 </figure>
             </div>
