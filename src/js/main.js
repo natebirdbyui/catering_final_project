@@ -63,11 +63,13 @@ document.addEventListener("DOMContentLoaded", async () => {
         const { initGuestCalculator } = await import("./guestCalculator.js");
         const { initBookingValidation } = await import("./bookingValidation.js");
         const { initCheckoutNavigation } = await import("./checkoutNavigation.js");
+        const { initCalendar } = await import("./calendar.js");
 
         initBookingPage();
         initGuestCalculator();
         initBookingValidation();
         initCheckoutNavigation();
+        initCalendar();
     }
 
     // Cart Page
