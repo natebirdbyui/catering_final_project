@@ -1,93 +1,92 @@
 {
-    "menu": [
+        "menu": [
         {
-            "id": 1,
-            "category": "BBQ",
-            "name": "Grilled Chicken",
-            "servings_per_tray": 8,
-            "price_per_serving": 2.50,
-            "description": "Juicy grilled chicken grilled to perfection with our special BBQ sauce, served with cilantro and lime.",
-            "image": "/images/food/bbq-2823726_640.jpg"
-
+                "id": 1,
+                "category": "BBQ",
+                "name": "Grilled Chicken",
+                "servings_per_tray": 8,
+                "price_per_serving": 2.5,
+                "description": "Juicy grilled chicken grilled to perfection with our special BBQ sauce, served with cilantro and lime.",
+                "image": "/images/food/bbq-2823726_640.jpg"
         },
         {
-            "id": 2,
-            "category": "BBQ",
-            "name": "BBQ Ribs Complete Meal",
-            "servings_per_tray": 20,
-            "price_per_serving": 4.00,
-            "description": "Tender BBQ ribs smoked to perfection glazed with our special BBQ sauce, served with baked potatoes, garlic bread, and pit style beans. A delicious meal!",
-            "image": "/images/food/rsz_complete_bbq.jpg"
+                "id": 2,
+                "category": "BBQ",
+                "name": "BBQ Ribs Complete Meal",
+                "servings_per_tray": 20,
+                "price_per_serving": 4.0,
+                "description": "Tender BBQ ribs smoked to perfection glazed with our special BBQ sauce, served with baked potatoes, garlic bread, and pit style beans. A delicious meal!",
+                "image": "/images/food/rsz_complete_bbq.jpg"
         },
         {
-            "id": 3,
-            "category": "BBQ",
-            "name":"Bacon Wrapped Pork Tenderloin",
-            "servings_per_tray": 10,
-            "price_per_serving": 5.00,
-            "description": "Juicy pork tenderloin wrapped smoked in crispy bacon and glazed with our special BBQ sauce.",
-            "image": "/images/food/rsz_bacon_wrap_pork.jpg"
+                "id": 3,
+                "category": "BBQ",
+                "name": "Bacon Wrapped Pork Tenderloin",
+                "servings_per_tray": 10,
+                "price_per_serving": 5.0,
+                "description": "Juicy pork tenderloin wrapped smoked in crispy bacon and glazed with our special BBQ sauce.",
+                "image": "/images/food/rsz_bacon_wrap_pork.jpg"
         },
         {
-            "id": 4,
-            "category":"BBQ",
-            "name": "Hamburger & Hotdog Meal",
-            "servings_per_tray": 12,
-            "price_per_serving": 2.50,
-            "description": "A delicious meal of our signature smoked hamburgers and hotdogs served with fries, and mushrooms.",
-            "image": "/images/food/rsz_bbq_hamburger_hotdog.jpg"
+                "id": 4,
+                "category": "BBQ",
+                "name": "Hamburger & Hotdog Meal",
+                "servings_per_tray": 12,
+                "price_per_serving": 2.5,
+                "description": "A delicious meal of our signature smoked hamburgers and hotdogs served with fries, and mushrooms.",
+                "image": "/images/food/rsz_bbq_hamburger_hotdog.jpg"
         },
         {
-            "id": 5,
-            "category":"Baking",
-            "name": "Wedding Cake",
-            "servings_per_tray": 75,
-            "price_per_serving": 5.00,
-            "description": "A delicious wedding cake with layers of vanilla and chocolate cake, filled with our special buttercream frosting.",
-            "image": "/images/food/wedding-cake-639516_640.jpg"
+                "id": 5,
+                "category": "Baking",
+                "name": "Wedding Cake",
+                "servings_per_tray": 75,
+                "price_per_serving": 5.0,
+                "description": "A delicious wedding cake with layers of vanilla and chocolate cake, filled with our special buttercream frosting.",
+                "image": "/images/food/wedding-cake-639516_640.jpg"
         },
         {
-            "id": 6,
-            "category":"Baking",
-            "name": "Boston Market Sweet Potato Casserole",
-            "servings_per_tray": 20,
-            "price_per_serving": 2.00,
-            "description": "A delicious sweet potato casserole with a buttery, cinnamon-sugar topping, perfect for any holiday meal.",
-            "image": "/images/food/rsz_1sweet_potato_casserole.jpg"
+                "id": 6,
+                "category": "Baking",
+                "name": "Boston Market Sweet Potato Casserole",
+                "servings_per_tray": 20,
+                "price_per_serving": 2.0,
+                "description": "A delicious sweet potato casserole with a buttery, cinnamon-sugar topping, perfect for any holiday meal.",
+                "image": "/images/food/rsz_1sweet_potato_casserole.jpg"
         },
         {
-            "id": 7,
-            "category": "Cooking",
-            "name": "Tacos del camarón",
-            "servings_per_tray": 12,
-            "price_per_serving": 3.50,
-            "description": "Delicious shrimp tacos with salsa roja, grilled onions, mexican crema, fire roasted peppers and corn, along with cilantro and lime.",
-            "image": "/images/food/tacos-4495602_640.jpg"
+                "id": 7,
+                "category": "Cooking",
+                "name": "Tacos del camarón",
+                "servings_per_tray": 12,
+                "price_per_serving": 3.5,
+                "description": "Delicious shrimp tacos with salsa roja, grilled onions, mexican crema, fire roasted peppers and corn, along with cilantro and lime.",
+                "image": "/images/food/tacos-4495602_640.jpg"
         },
         {
-            "id": 8,
-            "category": "Cooking",
-            "name": "Chicken Enchiladas",
-            "servings_per_tray": 15,
-            "price_per_serving": 3.00,
-            "description": "Tender chicken enchiladas filled with seasoned chicken, cheese, and green chilies, served with rice and beans.",
-            "image": "/images/food/rsz_chicken_enchiladas.jpg"
+                "id": 8,
+                "category": "Cooking",
+                "name": "Chicken Enchiladas",
+                "servings_per_tray": 15,
+                "price_per_serving": 3.0,
+                "description": "Tender chicken enchiladas filled with seasoned chicken, cheese, and green chilies, served with rice and beans.",
+                "image": "/images/food/rsz_chicken_enchiladas.jpg"
         },
         {
-            "id": 9,
-            "category": "Cooking",
-            "name": "Tacos al Pastor",
-            "servings_per_tray": 12,
-            "price_per_serving": 3.50,
-            "description": "Perfected pork tacos marinated in a blend of spices and pineapple, white onion, cilantro, and lime. Our owner's favorite taco when he served his mission in Mexico! He knows the flavor, and he perfected it like a real taquero!",
-            "image": "/images/food/rsz_tacos_alpastor.jpg"
+                "id": 9,
+                "category": "Cooking",
+                "name": "Tacos al Pastor",
+                "servings_per_tray": 12,
+                "price_per_serving": 3.5,
+                "description": "Perfected pork tacos marinated in a blend of spices and pineapple, white onion, cilantro, and lime. Our owner's favorite taco when he served his mission in Mexico! He knows the flavor, and he perfected it like a real taquero!",
+                "image": "/images/food/rsz_tacos_alpastor.jpg"
         },
         {
                 "id": 10,
                 "category": "Refreshments",
                 "name": "Lemonade",
                 "servings_per_tray": 12,
-                "price_per_serving": 1.50,
+                "price_per_serving": 1.5,
                 "description": "Refreshing hand-squeezed lemonade, our owner has perfected this recipe from his time working for Chick-fil-A.",
                 "image": "/images/drinks/lemonade.jpg"
         },
@@ -96,7 +95,7 @@
                 "category": "Refreshments",
                 "name": "Soda",
                 "servings_per_tray": 12,
-                "price_per_serving": 1.50,
+                "price_per_serving": 1.5,
                 "description": "Delicious homemade soda, perfect for any occasion.",
                 "image": "/images/drinks/sodas.jpg"
         },
@@ -105,7 +104,7 @@
                 "category": "Refreshments",
                 "name": "Horchata",
                 "servings_per_tray": 12,
-                "price_per_serving": 1.50,
+                "price_per_serving": 1.5,
                 "description": "Delicious homemade horchata, a traditional Mexican rice drink flavored with cinnamon and vanilla. Nathan has mastered this recipe from his time living in Mexico.",
                 "image": "/images/drinks/horchata.jpg"
         },
@@ -114,7 +113,7 @@
                 "category": "Sides",
                 "name": "Macaroni Salad",
                 "servings_per_tray": 12,
-                "price_per_serving": 2.00,
+                "price_per_serving": 2.0,
                 "description": "Creamy and delicious macaroni salad made from the heart. From our kitchen to your table!",
                 "image": "/images/food/macaroni_salad.jpg"
         },
@@ -123,7 +122,7 @@
                 "category": "Sides",
                 "name": "Potato Salad",
                 "servings_per_tray": 12,
-                "price_per_serving": 2.00,
+                "price_per_serving": 2.0,
                 "description": "Creamy and delicious potato salad, this potato salad has many great seasonings to make your taste buds dance.",
                 "image": "/images/food/potato_salad.jpg"
         },
@@ -132,7 +131,7 @@
                 "category": "Sides",
                 "name": "Chef Salad",
                 "servings_per_tray": 12,
-                "price_per_serving": 2.50,
+                "price_per_serving": 2.5,
                 "description": "Crisp and refreshing chef salad, a perfect side dish for any meal.",
                 "image": "/images/food/chef_salad.jpg"
         },
@@ -141,25 +140,16 @@
                 "category": "Sides",
                 "name": "Pit Style Baked Beans",
                 "servings_per_tray": 20,
-                "price_per_serving": 2.00,
+                "price_per_serving": 2.0,
                 "description": "Delicious pit style baked beans, you don't like beans, this will change your mind!",
                 "image": "/images/food/rsz_pit_style_beans.jpg"
-        },
-        {
-                "id": 17,
-                "category": "Sides",
-                "name": "Boston Market Sweet Potato Casserole",
-                "servings_per_tray": 20,
-                "price_per_serving": 1.50,
-                "description": "Delicious Boston Market sweet potato casserole, a perfect side dish for any meal.",
-                "image": "/images/food/rsz_1sweet_potato_casserole.jpg"
         },
         {
                 "id": 18,
                 "category": "Sides",
                 "name": "Texas Twinkie",
                 "servings_per_tray": 12,
-                "price_per_serving": 1.50,
+                "price_per_serving": 1.5,
                 "description": "Delicious Texas Twinkie, this is a great side dish that will make a meal of itself. We know you can't have just one bite.",
                 "image": "/images/food/rsz_1texas_twinkie.jpg"
         },
@@ -168,7 +158,7 @@
                 "category": "Entree",
                 "name": "Steak and Potatoes",
                 "servings_per_tray": 8,
-                "price_per_serving": 6.00,
+                "price_per_serving": 6.0,
                 "description": "Juicy steak served with perfectly smoked-baked potatoes, a hearty entree to make the party right.",
                 "image": "/images/food/rsz_steak_and_tators.jpg"
         },
@@ -177,20 +167,18 @@
                 "category": "Entree",
                 "name": "Tri-TipSteak and Potatoes",
                 "servings_per_tray": 12,
-                "price_per_serving": 8.50,
+                "price_per_serving": 8.5,
                 "description": "Juicy tri-tip steak served with perfectly smoked-baked potatoes, a hearty entree that will make your guests talk about it for years.",
                 "image": "/images/food/rsz_steak_n_potatoes.jpg"
         },
         {
-                "id":21,
+                "id": 21,
                 "category": "Entree",
                 "name": "Smoked Bacon Wrapped Chicken Bombs",
                 "servings_per_tray": 8,
-                "price_per_serving": 7.00,
+                "price_per_serving": 7.0,
                 "description": "Smoked bacon wrapped chicken bombs, a flavorful and indulgent entree option. These bombs are made with tender chicken breasts stuffed with a savory filling, wrapped in crispy bacon, and smoked to perfection. The result is a deliciously smoky and juicy dish that will satisfy any meat lover's cravings.",
                 "image": "/images/food/rsz_chicken_bombs.jpg"
         }
-
-
-    ]
+        ]
 }
