@@ -14,7 +14,10 @@ import {
 console.log("cartPage.js loaded");
 
 export function initCartPage() {
-    renderCartPage();
+
+    requestAnimationFrame(() => {
+        renderCartPage();
+    });
 
     window.addEventListener("cart:update", () => {
         renderCartPage();
@@ -23,18 +26,39 @@ export function initCartPage() {
 
 function renderCartPage() {
     const cart = getCart();
-    const container = document.getElementById("cart-page-items");
-    const subtotalEl = document.getElementById("page-subtotal");
-    const guestDisplay = document.getElementById("guest-count");
-    const taxEl = document.getElementById("page-tax");
-    const totalEl = document.getElementById("page-total");
+
+    const container =
+        document.getElementById("cart-page-items");
+
+    const subtotalEl =
+        document.getElementById("page-subtotal");
+
+    const guestDisplay =
+        document.getElementById("cart-guest-count");
+
+    const taxEl =
+        document.getElementById("page-tax");
+
+    const totalEl =
+        document.getElementById("page-total");
+
+
+    if (!container) {
+        console.log("Cart container not ready");
+        return;
+    }
+
+
+    if (guestDisplay) {
+        const guests =
+            Number(localStorage.getItem("hipoc_guest_count")) || 0;
+
+        console.log("Cart guests:", guests);
+
+        guestDisplay.textContent = guests;
+    }
 
     if (!container) return;
-
-    if (guestDisplay && cart.length > 0) {
-        guestDisplay.textContent =
-            cart[0].guests_requested || 0;
-    }
     
     // EMPTY CART
     if (cart.length === 0) {
@@ -64,8 +88,8 @@ function renderCartPage() {
                 </div>
                 <span>
                     $${(
-                        item.price_per_serving *
-                        item.quantity
+                        item.servings_purchased *
+                        item.price_per_serving
                     ).toFixed(2)}
                 </span>
             </div>

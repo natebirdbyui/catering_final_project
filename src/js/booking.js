@@ -7,14 +7,25 @@ import {
     calculateTotal,
     calculateItemCount
 } from "./checkoutProcess.mjs";
+const GUEST_KEY = "hipoc_guest_count";
 
 console.log("booking.js loaded");
 
 export function initBookingPage() {
-    const cart = getCart();
-    renderBookingItems(cart);
-    renderBookingSummary(cart);}
-function renderBookingItems(cart) {
+    // Use requestAnimationFrame to ensure the DOM is fully loaded before we try to access elements
+    requestAnimationFrame(() => {
+        const cart = getCart();
+        const guests =
+            Number(localStorage.getItem(GUEST_KEY)) ||
+            cart[0]?.guests_requested ||
+            0;
+
+        renderBookingItems(cart, guests);
+        renderBookingSummary(cart, guests);
+
+    });
+}
+function renderBookingItems(cart, guests) {
     const container = document.getElementById("booking-items");
     if (!container) return;
     if (cart.length === 0) {
@@ -28,7 +39,7 @@ function renderBookingItems(cart) {
             <h3>${item.name}</h3>
             <p>
                 Guests Requested:
-                ${item.guests_requested}
+                ${guests}
             </p>
             <p>
                 Trays Ordered:
@@ -49,7 +60,7 @@ function renderBookingItems(cart) {
         </div>
     `).join("");
 }
-function renderBookingSummary(cart) {
+function renderBookingSummary(cart, guests) {
     const guestsEl = document.getElementById("booking-guests");
     const itemCount = document.getElementById("item-count");
     const subtotalEl = document.getElementById("subtotal");
@@ -72,8 +83,7 @@ function renderBookingSummary(cart) {
     if (totalEl)
         totalEl.textContent = total.toFixed(2);
 
-    if (guestsEl && cart.length > 0) {
-        guestsEl.textContent =
-            cart[0].guests_requested;
+    if (guestsEl) {
+        guestsEl.textContent = guests;
     }
 }

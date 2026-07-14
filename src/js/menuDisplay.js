@@ -36,19 +36,15 @@ export function displayMenuItems(menu) {
         servings.textContent =
             `Serves approx. ${item.servings_per_tray || "varies"} guests per tray`;
 
-        // GET GUEST COUNT
-        const guestInput = document.getElementById("guest-count");
-
-        const guests = guestInput &&
-            Number.isInteger(Number(guestInput.value)) &&
-            Number(guestInput.value) > 0
-                ? Number(guestInput.value)
-                : 1;
+        // GET GUEST COUNT FROM LOCAL STORAGE
+        const guests = Number(
+            localStorage.getItem("hipoc_guest_count")
+        ) || 1;
 
         // CALCULATE TRAYS
-        const traysNeeded = guests > 0
-            ? Math.ceil(guests / item.servings_per_tray)
-            : 1;
+        const traysNeeded = Math.ceil(
+            guests / item.servings_per_tray
+        );
 
             // PRICE
         const price = document.createElement("p");

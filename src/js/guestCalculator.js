@@ -1,3 +1,4 @@
+// guestCalculator.js
 import { loadMenu } from "./menu.js";
 import { displayMenuItems } from "./menuDisplay.js";
 const GUEST_KEY = "hipoc_guest_count";
@@ -8,7 +9,7 @@ export function initGuestCalculator() {
     const input = document.getElementById("guest-count");
     if (!input) return;
 
-    const savedGuests = localStorage.getItem(GUEST_KEY);
+    const savedGuests = localStorage.getItem(GUEST_KEY);    
     if (savedGuests) {
         input.value = savedGuests;
     }
@@ -25,6 +26,7 @@ export function initGuestCalculator() {
             input.value = guests;
         }
 
+        //Saves guest count to local storage
         localStorage.setItem(
             GUEST_KEY,
             guests
@@ -35,8 +37,9 @@ export function initGuestCalculator() {
             new Event("guest:update")
         );
 
+        // Reload menu items to update tray calculations
         const menu = await loadMenu();
         displayMenuItems(menu);
-        localStorage.setItem(GUEST_KEY, guests);
+        console.log(`Guest count updated: ${guests}`);
     });
 }

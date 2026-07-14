@@ -68,22 +68,49 @@ export function addToCart(item) {
 
 export function increaseItem(id) {
     const cart = getCart();
+
     const item = cart.find(
         i => i.id == id
     );
+
     if (item) {
         item.quantity++;
+
+        item.trays_needed = item.quantity;
+
+        item.servings_purchased =
+            item.quantity *
+            item.servings_per_tray;
+
+        item.estimated_cost =
+            item.servings_purchased *
+            item.price_per_serving;
     }
+
     saveCart(cart);
 }
 
 export function decreaseItem(id) {
     let cart = getCart();
+
     cart = cart
         .map(item => {
+
             if (item.id == id) {
                 item.quantity--;
+
+                item.trays_needed =
+                    item.quantity;
+
+                item.servings_purchased =
+                    item.quantity *
+                    item.servings_per_tray;
+
+                item.estimated_cost =
+                    item.servings_purchased *
+                    item.price_per_serving;
             }
+
             return item;
         })
         .filter(item => item.quantity > 0);

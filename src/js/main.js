@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         const { initCartSidebar } = await import("./cartUI.js");
         const { initCheckoutBar } = await import("./checkoutUI.js");
         const { initMobileCart } = await import("./mobileCart.js");
+        const { initCheckoutNavigation } = await import("./checkoutNavigation.js");
+        const { initGuestCalculator } = await import("./guestCalculator.js");
+
+        initGuestCalculator();
 
         const menu = await loadMenu();
         displayMenuItems(menu);
@@ -50,24 +54,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         initCartSidebar();
         initCheckoutBar();
         initMobileCart();
+        initCheckoutNavigation();
     }
 
     // Booking Page
-    if (document.querySelector("#booking-form")) {
+    if (document.querySelector("#checkout-form")) {
         const { initBookingPage } = await import("./booking.js");
         const { initGuestCalculator } = await import("./guestCalculator.js");
         const { initBookingValidation } = await import("./bookingValidation.js");
+        const { initCheckoutNavigation } = await import("./checkoutNavigation.js");
 
         initBookingPage();
         initGuestCalculator();
         initBookingValidation();
+        initCheckoutNavigation();
     }
 
     // Cart Page
     if (document.querySelector(".cart-page")) {
         const { initCartPage } = await import("./cartPage.js");
         const { initCheckoutNavigation } = await import("./checkoutNavigation.js");
-
+        
         initCartPage();
         initCheckoutNavigation();
     }
