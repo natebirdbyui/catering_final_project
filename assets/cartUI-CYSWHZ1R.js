@@ -1,4 +1,4 @@
-import{g as u,i as p,d as y,u as x}from"./cart-CsStHKWq.js";console.log("cartUI.js loaded");function E(){window.addEventListener("cart:update",a=>{i(a.detail?.totals)}),i({subtotal:0,tax:0,total:0})}function i(a={}){const r=u(),e=document.getElementById("cart-sidebar-items"),n=document.getElementById("cart-subtotal"),o=document.getElementById("cart-tax"),s=document.getElementById("cart-total");if(!e)return;if(r.length===0){e.innerHTML=`
+import{g as u,i as p,d as y,u as x}from"./cart-K_G46SnB.js";console.log("cartUI.js loaded");function E(){window.addEventListener("cart:update",a=>{i(a.detail?.totals)}),i({subtotal:0,tax:0,total:0})}function i(a={}){const r=u(),e=document.getElementById("cart-sidebar-items"),n=document.getElementById("cart-subtotal"),o=document.getElementById("cart-tax"),s=document.getElementById("cart-total");if(!e)return;if(r.length===0){e.innerHTML=`
             <p>Your order is empty.</p>
         `,n&&(n.textContent="0.00"),o&&(o.textContent="0.00"),s&&(s.textContent="0.00");return}e.innerHTML=r.map(t=>`
         <div class="cart-item">
